@@ -15,7 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 public class StorageService {
 
-	private final Path rootLocation = Paths.get("", "src", "images");
+	private final Path rootLocation = Paths.get("", "images");
 
 public String store(MultipartFile file) throws Exception {
 		String filename = StringUtils.cleanPath(file.getOriginalFilename());

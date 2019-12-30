@@ -1,0 +1,16 @@
+:host {
+  display: inline-block;
+
+  #container {
+    width: 100%;
+
+    #student-card {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      display: inline-block;
+      background-color: white;
+    }
+  }
+}
