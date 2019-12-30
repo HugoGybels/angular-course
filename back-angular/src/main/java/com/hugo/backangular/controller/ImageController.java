@@ -3,6 +3,8 @@ package com.hugo.backangular.controller;
 import java.io.IOException;
 import java.io.InputStream;
 
+import javax.ws.rs.QueryParam;
+
 import org.apache.commons.compress.utils.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,9 +28,9 @@ public class ImageController {
 	private StorageService storageService;
 
 	@GetMapping(value = "/1", produces = MediaType.IMAGE_JPEG_VALUE)
-	public @ResponseBody byte[] getImageWithMediaType() throws IOException {
+	public @ResponseBody byte[] getImageWithMediaType(@QueryParam("filename") String filename) throws IOException {
 		InputStream in = getClass()
-				.getResourceAsStream("/image.jpg");
+				.getResourceAsStream("images/" + filename);
 		return IOUtils.toByteArray(in);
 	}
 
