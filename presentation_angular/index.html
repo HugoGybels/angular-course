@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Angular</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sqli.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!--
+					Chapitre 0
+				-->
+				<section class="section-title" data-background="img/background-1.jpg">
+					<h1>Jacadémie</h1>
+					<p>Hugo Gybels</p>
+					<p>hgybels@sqli.com</p>
+				</section>
+				<section>
+					<h1>Objectif des deux journées</h1>
+					<ul>
+						<li>Comprendre ce qu'est Angular</li>
+						<li>9h30 - 12h : TP première application</li>
+						<li>13h30 - 15h : Notions de base</li>
+						<li>15h - 16h30 : TP premier composant</li>
+					</ul>
+				</section>
+				<section>
+					<h1>L'agenda de la journée</h1>
+					<ul>
+						<li>8h - 9h30 : Présentation d'Angular</li>
+						<li>9h30 - 12h : TP première application</li>
+						<li>13h30 - 15h : Notions de base</li>
+						<li>15h - 16h30 : TP premier composant</li>
+					</ul>
+				</section>
+
+				<!--
+					Chapitre 1
+				-->
+				<section data-background="img/background-1.jpg">
+					<h1>CHAPITRE 1</h1>
+					<h2>Le web et ses frameworks</h2>
+				</section>
+				<section data-background="img/yellow.png">
+					<h1>Un peu d'histoire</h1>
+					<p class="fragment">1990 : HTML</p>
+					<p class="fragment">1998 : CSS</p>
+					<p class="fragment">2000 : Javascript</p>
+					<p class="fragment">2020 : ???</p>
+				</section>
+				<section data-background="img/yellow.png">
+					<h1>Single Page Application</h1>
+					<p>Application web</p>
+					<p>Imite une application native</p>
+					<p>Pas de rafraîchissement</p>
+					<p>Temps de chargement réduits</p>
+					<p class="fragment highlight-purple"><b>→ UI moins "internet"</b></p>
+				</section>
+				<section data-background="img/yellow.png">
+					<h1>Framework ?</h1>
+					<p>Anglais : "Cadre de travail"</p>
+					<p>Application, jeu, site web, css, serveur, langage, etc.</p>
+					<p>Standards et formalisation : <span class="fragment highlight-purple">Partage et réutilisation du code</span></p>
+					<p>Simplifier la vie des dev</p>
+					<p>Architecture et outils : <span class="fragment highlight-purple">Ne pas réinventer la roue</span></p>
+					<p class="fragment">Pas forcément orienté débutant</p>
+				</section>
+				<section data-background="img/yellow.png">
+					<h1>Franmworks existants</h1>
+					<p>Vue, React, Angular</p>
+					<img src="img/vuejs.png">
+					<img src="img/react.png">
+					<img src="img/angular.png">
+				</section>
+				<section data-background="img/yellow.png">
+					<h1>Pourquoi Angular ?</h1>
+					<p class="fragment">Géré par Google</p>
+					<p class="fragment">TypeScript</p>
+					<p class="fragment">Bibliothèques riches</p>
+					<p class="fragment">Ionic</p>
+					<p class="fragment highlight-purple">Temps d'apprentissage assez élevé</p>
+				</section>
+				<section data-background="img/yellow.png">
+					<h1>Typescript</h1>
+					<p class="fragment">Un "superset" de Javascript (transcompilé)</p>
+					<p class="fragment">Langage strict</p>
+					<p class="fragment">Typage des variables / fonctions</p>
+					<p class="fragment">Fonctions lambda (arrow)</p>
+					<p class="fragment">Classes et interfaces</p>
+					<p class="fragment highlight-purple">Bien d'autre : <a href="https://www.typescriptlang.org/docs/home.html">https://www.typescriptlang.org/docs/home.html</a></p>
+				</section>
+				<!--
+					Chapitre 2
+				-->
+				<section data-background="img/background-1.jpg">
+					<h1>CHAPITRE 2</h1>
+					<h2>Angular Introduction</h2>
+				</section>
+				<section data-background="img/purple.png">
+					<h1>Introduction</h1>
+					<p class="fragment">Première version AngularJs</p>
+					<p class="fragment">Table rase avec <b>Angular 2</b></p>
+					<p class="fragment">Single Page Application, bureau, mobile</p>
+					<p class="fragment">Performance, normes, productivité et maintenabilité</p>
+				</section>
+
+				<section data-background="img/purple.png">
+					<h1>Environnement de développement</h1>
+					<p class="fragment">NodeJs</p>
+					<p class="fragment">Npm</p>
+					<img src="img/nodejs.png"/>
+					<img src="img/npm.png"/>
+				</section>
+
+				<section data-background="img/purple.png">
+					<h1>Environnement de développement</h1>
+					<p class="fragment">Angular CLI</p>
+					<code class="hljs atom-one-light">npm install -g @angular/cli</code>
+					<p class="fragment">Npm</p>
+					<img src="img/nodejs.png"/>
+					<img src="img/npm.png"/>
+				</section>
+
+				<section data-background="img/purple.png">
+					<h1>Composants</h1>
+					<p class="fragment"></p>
+					<p class="fragment"></p>
+					<p class="fragment"></p>
+					<p class="fragment"></p>
+				</section>
+
+
+
+				<section>
+					Pour plus tard :
+					RXjS
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
