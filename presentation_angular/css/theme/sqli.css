@@ -18,8 +18,28 @@ body {
   --purple: #371450;
   --yellow: #ffd64b; }
 
-.purple {
+.reveal .purple {
   color: var(--purple);
+}
+
+.reveal .yellow {
+  color: var(--yellow);
+}
+
+.reveal .blue {
+  color: var(--blue);
+}
+
+.reveal .red {
+  color: var(--red);
+}
+
+.reveal .white {
+  color: white;
+}
+
+.reveal pre code.hljs {
+  overflow: hidden;
 }
 
 .reveal .section-title h2 {
@@ -55,6 +75,10 @@ body {
   align-items: center;
 }
 
+.reveal h1.small-title {
+  font-size: 2em;
+}
+
 .reveal .framework-existant img {
   border: 0;
   box-shadow: none;
@@ -62,6 +86,27 @@ body {
   width: 23%;
   margin: 0 50px;
 }
+
+.reveal #nodejsnom-container {
+  display: flex;
+}
+
+.reveal #nodejsnom-container img {
+  width: 70%;
+}
+
+#nodejs,
+#npm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cmd-base code {
+  font-size: 20px;
+}
+
 
 .reveal {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -288,10 +333,7 @@ body {
  *********************************************/
 .reveal section img {
   margin: 15px 0px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #222;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
-
+}
 .reveal section img.plain {
   border: 0;
   box-shadow: none; }
