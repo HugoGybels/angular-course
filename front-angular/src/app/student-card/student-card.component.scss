@@ -1,53 +1,29 @@
 :host {
   display: inline-block;
 
-  #container {
+  width: 10%;
+  margin: 15px;
+  border-radius: 6px;
+  background-color: #333;
+  box-shadow: 0 .25rem .25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  img {
     width: 100%;
+    height: 200px;
+    min-height: 150px;
+    object-fit: cover;
+  }
 
-    #student-card {
-      width: 25%;
-      margin: 15px;
-      border-radius: 6px;
-      display: inline-block;
-      background-color: #333;
-      box-shadow: 0 .25rem .25rem rgba(0,0,0,0.2), 0 0 1rem rgba(0,0,0,0.2);
-      overflow: hidden;
+  .details {
+    padding: 10px;
+    color: white;
 
-      img {
-        width: 100%;
-        height: 200px;
-        min-height: 150px;
-        object-fit: cover;
-      }
+    .nom {
+      font-weight: 900;
+      font-size: 1.5em;
 
-      .details {
-        padding: 10px;
-        color: white;
-
-        p {
-          white-space: nowrap;
-        }
-
-        .nom {
-          font-weight: 900;
-          font-size: 1.5em;
-
-        }
-      }
     }
   }
-
-  #add-button {
-    position: absolute;
-    border: none;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #4abdac;
-    color: white;
-    font-size: 2em;
-    cursor: pointer;
-  }
 }
+

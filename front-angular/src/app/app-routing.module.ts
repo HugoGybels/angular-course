@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { StudentCardComponent } from './student-card/student-card.component';
+import {StudentListComponent} from './student-list/student-list.component';
 
 const routes: Routes = [
-  { path: '', component: StudentCardComponent, pathMatch: 'prefix' },
+  { path: '', component: StudentListComponent, pathMatch: 'prefix' },
 ];
 
 @NgModule({
