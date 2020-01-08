@@ -165,28 +165,28 @@
 			<section data-background="img/white.png">
 				<h1>SCSS</h1>
 				<div style="display: flex">
-					<div>
+					<div style="width: 50%">
 						<p>CSS</p>
 						<pre><code class="hljs">
-			.first-class h2 {
-			    color: pink;
-			}
-			.first-class .is-active {
-			    background-color: #EEE;
-			}
+.first-class h2 {
+  color: pink;
+}
+.first-class .is-active {
+  background-color: #EEE;
+}
 								</code></pre>
 					</div>
-					<div>
+					<div style="width: 50%">
 						<p>SCSS</p>
 						<pre><code class="hljs">
-			.first-class {
-			    h2 {
-				    color: $main-color;
-			    }
-			    .is-active {
-				    background-color: #EEE;
-			    }
-			}
+.first-class {
+  h2 {
+    color: $main-color;
+  }
+  .is-active {
+    background-color: #EEE;
+  }
+}
 								</code></pre>
 					</div>
 				</div>
@@ -265,9 +265,15 @@
 			<section data-background-color="#ffd64b" data-background-transition="zoom">
 				<h1 class="red">Initialiser une application</h1>
 			</section>
-
-			<section data-background-color="#ffd64b" data-background-transition="zoom">
-				<h1 class="red">Bonnes pratiques</h1>
+			<section>
+				<img src="img/new-app.PNG" alt="new-app"/>
+			</section>
+			<section>
+				<h1>Ng Serve</h1>
+				<img src="img/ng-serve.PNG" alt="ng-serve"/>
+				<p>Lance l'application en local</p>
+			</section>
+			<section data-background="img/localhost.PNG" data-background-transition="slide">
 			</section>
 		</section>
 
@@ -301,6 +307,62 @@
 			<section data-background="img/white.png">
 				<h1>Composant</h1>
 				<img src="img/composant-struct.PNG" alt="exemple de composant" style="width: 70%">
+			</section>
+			<section data-background="img/composant-files.PNG" >
+			</section>
+			<section data-background="img/white.png">
+				<h1>cycle de vie</h1>
+				<ul>
+					<li>constructor</li>
+					<li>ngOnInit</li>
+					<li>ngOnChanges</li>
+					<li>ngOnDestroy</li>
+					<li>...</li>
+				</ul>
+				<p><a href="https://angular.io/guide/lifecycle-hooks">https://angular.io/guide/lifecycle-hooks</a></p>
+			</section>
+			<section data-background="img/white.png">
+				<h1 class="small-title">Binding du template</h1>
+				<ul>
+					<li><b>{{}}</b> pour le binding one way</li>
+					<li><b>*</b> pour les directives angular</li>
+					<li><b>[]</b> pour le binding de propriété</li>
+					<li><b>()</b> pour le binding d'évènement</li>
+					<li><b>#</b> pour la déclaration de variable</li>
+				</ul>
+			</section>
+			<section>
+				<h1 class="small-title">Binding du template</h1>
+				<ul>
+					<li>Le composant est une classe</li>
+					<li>On utilise {{}} pour effectuer un binding one way</li>
+				</ul>
+					<div style="display: flex; align-items: center;">
+					<div><pre><code class="hljs">
+export class MyComponent {
+	public ﬁrstname = ‘Sylvain’;
+	public lastname = ‘Dupont’;
+}
+					</code></pre></div>
+					<div><pre><code class="hljs">
+<span>{{ﬁrstname}}</span>
+<span>{{lastname}}</span>
+					</code></pre></div>
+					</div>
+			</section>
+			<section data-background-color="#55beea" data-background-transition="zoom">
+				<h1>Création d'un composant</h1>
+			</section>
+			<section data-background="img/white.PNG">
+				<img src="img/TP-componant.PNG" alt="tp-componant" />
+			</section>
+			<section data-background="img/white.png">
+				<h1>Communication entre composants</h1>
+				<p>Architecture sous forme d'un arbre</p>
+				<p>Input Output</p>
+			</section>
+			<section data-background-color="#ffd64b" data-background-transition="zoom">
+				<h1 class="red">Bonnes pratiques</h1>
 			</section>
 		</section>
 
