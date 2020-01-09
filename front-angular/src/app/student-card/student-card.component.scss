@@ -1,0 +1,29 @@
+:host {
+  display: inline-block;
+
+  width: 10%;
+  margin: 15px;
+  border-radius: 6px;
+  background-color: #333;
+  box-shadow: 0 .25rem .25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 200px;
+    min-height: 150px;
+    object-fit: cover;
+  }
+
+  .details {
+    padding: 10px;
+    color: white;
+
+    .nom {
+      font-weight: 900;
+      font-size: 1.5em;
+
+    }
+  }
+}
+
