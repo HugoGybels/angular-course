@@ -1,8 +1,7 @@
-<div id="container">
-  <div *ngFor="let student of students" id="student-card">
-  <img src="http://127.0.0.1:8881/images/{{student.filename}}" alt="id_pic" />
-    <p id="nom">Prenom Nom: {{student.prenom}} {{student.nom}}</p>
-    <p id="age">Age: {{student.age}}</p>
-  <p id="email">Email: {{student.email}}</p>
-  </div>
+<img src="http://127.0.0.1:8881/images/{{student.filename}}" alt="id_pic" />
+<div class="details">
+  <p class="nom">{{student.prenom | uppercase}} {{student.nom | uppercase}}</p>
+  <p class="age">Age: {{student.age}}</p>
+  <p class="email">Email: {{student.email}}</p>
 </div>
+

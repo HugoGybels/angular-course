@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Student} from '../model/student.model';
 import {StudentService} from '../student.service';
 
@@ -9,22 +9,13 @@ import {StudentService} from '../student.service';
 })
 export class StudentCardComponent implements OnInit {
 
-  private students: Student[] = [];
+  @Input()
+  public student: Student;
 
-  constructor(private studentService: StudentService) { }
+  constructor() { }
 
   ngOnInit() {
 
-    this.studentService.getAllStudents().subscribe(data => console.log('DATA : ', data));
-
-    // this.student = new Student({
-    //   id: 1,
-    //   prenom: 'Hugo',
-    //   nom: 'Gybels',
-    //   age: 24,
-    //   email: 'hugo4242@hotmail.fr',
-    //   filename: 'image.png'
-    // });
   }
 
 }

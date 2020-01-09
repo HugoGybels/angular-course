@@ -4,7 +4,10 @@
 html, body, app-root {
   height: 100%;
   overflow: hidden;
-  font-family: Ubuntu, sans-serif;
+  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  background-color: var(--clean);
+  background-color: #444;
+  margin: 0;
+  display: inline-block;
 }

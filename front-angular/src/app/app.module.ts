@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StudentCardComponent } from './student-card/student-card.component';
 import {HttpClientModule} from '@angular/common/http';
+import { StudentListComponent } from './student-list/student-list.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentCardComponent
+    StudentCardComponent,
+    StudentListComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,
