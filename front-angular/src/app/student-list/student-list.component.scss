@@ -1,6 +1,16 @@
 :host {
   display: block;
 
+  #recherche {
+    display: flex;
+    justify-content: center;
+
+    input {
+      width: 50%;
+      line-height: 2.5em;
+      margin: 20px;
+    }
+  }
 
   #cards-container {
     width: 100%;

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopBarComponent implements OnInit {
 
+  public dateObj = new Date();
+
   constructor() { }
 
   ngOnInit() {

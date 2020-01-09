@@ -1,4 +1,9 @@
 <app-top-bar></app-top-bar>
+
+<div id="recherche">
+  <input type="text" />
+</div>
+
 <div id="cards-container">
   <app-student-card *ngFor="let student of students" [student]="student"></app-student-card>
 </div>
