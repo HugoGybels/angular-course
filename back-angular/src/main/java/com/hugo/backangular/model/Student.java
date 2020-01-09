@@ -16,6 +16,7 @@ public class Student {
 	private String prenom;
 	private int age;
 	private String email;
+	private String filename;
 
 
 	public int getId() {
@@ -56,5 +57,13 @@ public class Student {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
 }

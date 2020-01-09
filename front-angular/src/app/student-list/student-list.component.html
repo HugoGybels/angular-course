@@ -1,0 +1,5 @@
+<app-top-bar></app-top-bar>
+<div id="cards-container">
+  <app-student-card *ngFor="let student of students" [student]="student"></app-student-card>
+</div>
+<button id="add-button" (click)="add()"></button>
