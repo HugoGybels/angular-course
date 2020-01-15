@@ -122,7 +122,7 @@
 		<section>
 			<section data-background="img/background-1.jpg">
 				<h1>CHAPITRE 2</h1>
-				<h2>Angular : Introduction</h2>
+				<h2>Angular</h2>
 			</section>
 			<section data-background-color="#eb2859" data-background-transition="zoom">
 				<h1 class="white">Introduction</h1>
@@ -131,6 +131,8 @@
 				<h1>Pourquoi Angular ?</h1>
 				<ul>
 					<li>Géré par Google</li>
+					<li>Performant</li>
+					<li>Mature</li>
 					<li>TypeScript</li>
 					<li>Bibliothèques riches</li>
 					<li>Ionic</li>
@@ -590,16 +592,18 @@ public somethingHappened = new EventEmitter&lt;void&gt;();</code></pre>
 				<h1>Qu'est ce qu'un service ?</h1>
 				<ul>
 					<li>Singleton</li>
+					<li class="fragment highlight-red">Centralise du code pour un module</li>
+					<li class="fragment highlight-red">Récupère les données</li>
 					<li class="fragment">Injection de dépendance</li>
 					<li class="fragment">Exécute des tâches</li>
 					<li class="fragment">Pas de duplication</li>
-					<li class="fragment highlight-red">Récupère les données</li>
 					<li class="fragment">Partage des données entre les composants</li>
 				</ul>
 			</section>
 			<section data-background="img/white.png">
-				<h1>Qu'est ce qu'un service ?</h1>
-				<pre><code class="hljs">ng generate service my-service</code></pre>
+				<h1>Génération du service</h1>
+				<pre><code class="hljs">ng generate service students</code></pre>
+				<p class="fragment">Remarque : On ne suffixe jamais pas '-service'</p>
 			</section>
 			<section>
 				<h1>Observables</h1>
@@ -626,9 +630,12 @@ public somethingHappened = new EventEmitter&lt;void&gt;();</code></pre>
 				<p>.get(url), .post(url, body), .put(...), .delete(...)</p>
 			</section>
 			<section data-background-color="#371450" data-background-transition="zoom">
-				<h1 class="red" style="text-transform: none">TP: Créer le service students</h1>
+				<h1 class="red" style="text-transform: none">TP: Créer le service de chargement de students</h1>
 			</section>
 		</section>
+
+		ngClass
+		https://openclassrooms.com/fr/courses/4668271-developpez-des-applications-web-avec-angular/5088601-ameliorez-la-structure-du-code-avec-les-services
 
 		<!--		&lt;!&ndash;-->
 		<!--            Chapitre-->
