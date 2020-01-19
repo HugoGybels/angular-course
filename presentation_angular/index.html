@@ -500,6 +500,10 @@ this.persons = [ ‘Thomas’, ‘Pierre’, ‘Valentin’ ];
   <app-unknown-item  *ngSwitchDefault           [item]="currentItem"></app-unknown-item>
 </div></code></pre>
 			</section>
+			<section data-background="img/white.png">
+				<h1 style="text-transform: none">ngClass</h1>
+				<!--				TODO-->
+			</section>
 			<section data-background-color="#ffd64b" data-background-transition="zoom">
 				<h1 class="red">Les (Built-in) pipes</h1>
 				<a href="https://angular.io/api?type=pipe">https://angular.io/api?type=pipe</a>
@@ -589,22 +593,53 @@ public somethingHappened = new EventEmitter&lt;void&gt;();</code></pre>
 				<h1>Et le backend ?</h1>
 			</section>
 			<section data-background="img/white.png">
-				<h1>Qu'est ce qu'un service ?</h1>
+				<h1 class="small-title">Qu'est ce qu'un service ?</h1>
 				<ul>
-					<li>Singleton</li>
 					<li class="fragment highlight-red">Centralise du code pour un module</li>
-					<li class="fragment highlight-red">Récupère les données</li>
-					<li class="fragment">Injection de dépendance</li>
-					<li class="fragment">Exécute des tâches</li>
+					<li class="fragment highlight-red">Partage des informations globales</li>
+					<li class="fragment">Utilisé dans plusieurs parties de l'application</li>
+				</ul>
+				<p>Exemple: Students, Authentification, création d'utilisateurs, déconnexion, etc.</p>
+			</section>
+
+			<section data-background="img/background-1.jpg">
+				<h1 class="small-title">Utilisation</h1>
+				<p>Doit être injecté</p>
+				<p>Niveau d'injection : nombre d'instance</p>
+				<ul>
+					<li class="fragment">app.module : Tous les composants & services</li>
+					<li class="fragment">app.component : Tous les composants</li>
+					<li class="fragment">my-component : Uniquement ce composant et ses enfants</li>
+				</ul>
+				<p class="fragment">Dans le dernier cas 1 instance du composant = 1 instance du service.</p>
+				<p class="fragment">Sinon <b>singleton</b></p>
+			</section>
+
+			<section data-background="img/background-1.jpg">
+				<h1 class="small-title">Utilisation</h1>
+				<pre><code class="hljs">providers: [StudentService]</code></pre>
+				<pre><code class="hljs">constructor(private studentService: StudentService) {}</code></pre>
+			</section>
+
+			<section data-background="img/background-1.jpg">
+				<h1 class="small-title">Utilité</h1>
+				<ul>
 					<li class="fragment">Pas de duplication</li>
 					<li class="fragment">Partage des données entre les composants</li>
+					<li class="fragment">Exécute des tâches</li>
+					<li class="fragment highlight-red">Récupère les données</li>
 				</ul>
 			</section>
+
 			<section data-background="img/white.png">
 				<h1>Génération du service</h1>
 				<pre><code class="hljs">ng generate service students</code></pre>
 				<p class="fragment">Remarque : On ne suffixe jamais pas '-service'</p>
 			</section>
+
+
+
+
 			<section>
 				<h1>Observables</h1>
 				<pre><code class="hljs">export class AppComponent implements OnInit {
@@ -634,8 +669,32 @@ public somethingHappened = new EventEmitter&lt;void&gt;();</code></pre>
 			</section>
 		</section>
 
-		ngClass
-		https://openclassrooms.com/fr/courses/4668271-developpez-des-applications-web-avec-angular/5088601-ameliorez-la-structure-du-code-avec-les-services
+		<!--
+            Chapitre 7 - Routing
+        -->
+		<section>
+			<section data-background="img/background-1.jpg">
+				<h1>CHAPITRE 7</h1>
+				<h2>Routing</h2>
+			</section>
+		</section>
+
+		<!--		RxJs ?-->
+
+
+		<!--
+    		Chapitre 8 - Formulaires
+		-->
+		<section>
+			<section data-background="img/background-1.jpg">
+				<h1>CHAPITRE 8</h1>
+				<h2>Formulaires</h2>
+			</section>
+		</section>
+
+
+		<!--		ngClass-->
+		<!--		https://openclassrooms.com/fr/courses/4668271-developpez-des-applications-web-avec-angular/5088601-ameliorez-la-structure-du-code-avec-les-services-->
 
 		<!--		&lt;!&ndash;-->
 		<!--            Chapitre-->
