@@ -643,43 +643,50 @@
 		</section>
 
 
-
-
-		<!--			<section>-->
-		<!--				<h1>Observables</h1>-->
-		<!--				<pre><code class="hljs">export class AppComponent implements OnInit {-->
-
-		<!--	secondes: number;-->
-
-		<!--	ngOnInit() {-->
-		<!--		const counter = Observable.interval(1000);-->
-		<!--		counter.subscribe(-->
-		<!--			  (value) => {-->
-		<!--				this.secondes = value;-->
-		<!--			  }-->
-		<!--		);-->
-		<!--	}-->
-		<!--}</code></pre>-->
-		<!--				<p>Opérateurs : map(), tap(), first(), reduce(), debounce()  etc.</p>-->
-		<!--			</section>-->
-		<!--			<section>-->
-		<!--				<h1 style="text-transform: none">HttpClient</h1>-->
-		<!--				<pre><code class="hljs language-java">constructor(private http: HttpClient) {-->
-		<!--	this.headers.append('Content-Type', 'application/json');-->
-		<!--}</code></pre>-->
-		<!--				<p>.get(url), .post(url, body), .put(...), .delete(...)</p>-->
-		<!--			</section>-->
-		<!--			<section data-background-color="#371450" data-background-transition="zoom">-->
-		<!--				<h1 class="red" style="text-transform: none">TP: Créer le service de chargement de students</h1>-->
-		<!--			</section>-->
-		<!--		</section>-->
-
 		<!--
-            Chapitre 7 - Routing
-        -->
+			Chapitre 7 - RxJs
+		-->
+
 		<section>
 			<section data-background="img/background-1.jpg">
 				<h1>CHAPITRE 7</h1>
+				<h2>RxJs</h2>
+			</section>
+
+			<section data-background="img/white.png">
+				<h1 class="small-title">Observables</h1>
+			</section>
+
+			<section data-background="img/white.png">
+				<h1 class="small-title">Subscriptions</h1>
+			</section>
+
+			<section data-background="img/white.png">
+				<h1 class="small-title">Subjects</h1>
+			</section>
+
+			<section data-background="img/white.png">
+				<h1 class="small-title">Opérateurs</h1>
+			</section>
+		</section>
+
+
+		<!--
+            Chapitre 8 - HttpClient
+        -->
+		<section>
+			<section data-background="img/background-1.jpg">
+				<h1>CHAPITRE 8</h1>
+				<h2>Interagir avec le serveur</h2>
+			</section>
+		</section>
+
+		<!--
+            Chapitre 8 - Routing
+        -->
+		<section>
+			<section data-background="img/background-1.jpg">
+				<h1>CHAPITRE 8</h1>
 				<h2>Routing</h2>
 			</section>
 
@@ -698,7 +705,7 @@
 const appRoute: Routes = [
 	{path: 'path1', component: UnComponent },
 	{path: 'path2', component: DeuxComponent },
-	{path: '', component: UnComponent } // Défaut
+	{path: '', 		component: UnComponent } // Défaut
 ];</code></pre>
 			</section>
 
@@ -739,36 +746,89 @@ onClic() {
 			</section>
 
 			<section data-background="img/white.png">
-				<h1 class="small-title">Paramètres</h1>
+				<h1 class="small-title">Paramètres de route</h1>
+				<pre><code class="hljs text">students/nom-de-l-etudiant</code></pre>
+				<pre class="fragment"><code class="hljs">const appRoutes: Routes = [
+	{ path: 'students',   	component: StudentsViewComponent },
+	{ path: 'students/:id', component: SingleStudentComponent },
+	{ path: 'add', 			component: NewStudentViewComponent },
+	{ path: '', 			component: StudentsViewComponent }
+];</code></pre>
+				<p class="small fragment">Tous les chemins de type <span>student/*</span> seront renvoyés vers </span>SingleStudentComponent</span></p>
+			</section>
+
+			<section data-background="img/white.png">
+				<h1 class="small-title">Paramètres de route</h1>
+				<pre class="fragment"><code class="hljs">constructor(private route: ActivatedRoute) { }</code></pre>
+				<pre class="fragment"><code class="hljs java">ngOnInit() {
+	this.name = this.route.snapshot.params['id'];
+}</code></pre>
 			</section>
 
 			<section data-background="img/white.png">
 				<h1 class="small-title">Redirection</h1>
+				<p>Exemple : 404 si page inéxistante</p>
+				<pre><code class="hljs html"><h2>Erreur 404</h2>
+<p>La page que vous cherchez n'existe pas !</p></code></pre>
+				<pre class="fragment"><code class="hljs js">const appRoutes: Routes = [
+	{ path: 'students',     component: StudentsViewComponent },
+	{ path: 'students/:id', component: SingleStudentComponent },
+	{ path: 'add',          component: NewStudentViewComponent },
+	{ path: '',             component: StudentsViewComponent },
+	{ path: 'not-found',    component: NotFoundComponent },
+  	{ path: '**',           redirectTo: 'not-found' }
+];</code></pre>
 			</section>
 
 			<section data-background="img/white.png">
 				<h1 class="small-title">Guards</h1>
+				<p>Gère l'accès à une route</p>
+				<p>Exemple : Vérifier l'authentification, l'identité</p>
+				<p>Avec ce qu'on connait : ngOnInit() de chaque composant.</p>
+				<ul>
+					<li>Lourd</li>
+					<li>Duplication de code</li>
+					<li>Plus d'erreurs</li>
+				</ul>
+				<pre><code class="hljs text">canActivate</code></pre>
+			</section>
+
+			<section data-background="img/white.png">
+				<h1 class="small-title">Guards</h1>
+				<blockquote>Guard : Service exécuté lors de l'accès à une route.</blockquote>
+				<p>Doit implémenter canActivate</p>
+				<p>Avec ce qu'on connait : ngOnInit() de chaque composant.</p>
+				<pre><code class="hljs text">canActivate</code></pre>
+			</section>
+
+			<section data-background="img/white.png">
+				<h1 class="small-title">Guards</h1>
+				<pre><code class="hljs text">import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+
+export class MyGuard implements CanActivate {
+  canActivate(
+	route: ActivatedRouteSnapshot,
+	state: RouterStateSnapshot): Observable<boolean> {
+  }
+}</code></pre>
 			</section>
 
 			<section data-background-color="#ffd64b" data-background-transition="zoom">
 				<h1 class="red">TP</h1>
 				<p>Création d'une route <code style="background-color: #ddd; color: var(--red)">'/nouveau'</code>
-				et d'une route <code style="background-color: #ddd; color: var(--red)">'/etudiant/:id'</code></p>
+					et d'une route <code style="background-color: #ddd; color: var(--red)">'/etudiant/:id'</code></p>
 			</section>
-
-
 
 		</section>
 
-		<!--		RxJs ?-->
-
 
 		<!--
-    		Chapitre 8 - Formulaires
+    		Chapitre 9 - Formulaires
 		-->
 		<section>
 			<section data-background="img/background-1.jpg">
-				<h1>CHAPITRE 8</h1>
+				<h1>CHAPITRE 9</h1>
 				<h2>Formulaires</h2>
 			</section>
 
@@ -779,7 +839,7 @@ onClic() {
 		</section>
 
 		<!--
-    		Chapitre 9 - Les Tests ?
+    		Chapitre 10 - Les Tests ?
 		-->
 
 	</div>
