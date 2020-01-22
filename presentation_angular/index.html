@@ -640,6 +640,10 @@
 				<pre><code class="hljs">ng generate service students</code></pre>
 				<p class="fragment">Remarque : On ne suffixe jamais pas '-service'</p>
 			</section>
+
+			<section data-background-color="#ffd64b" data-background-transition="zoom">
+				<h1 class="red small-title">TP Plier / Déplier les informations d'une carte</h1>
+			</section>
 		</section>
 
 
@@ -677,7 +681,37 @@
 		<section>
 			<section data-background="img/background-1.jpg">
 				<h1>CHAPITRE 8</h1>
-				<h2>Interagir avec le serveur</h2>
+				<h2>Interagir avec le serveur - HttpClient</h2>
+			</section>
+
+			<section data-background-color="#ffd64b" data-background-transition="zoom">
+				<h1 class="red">Configuration du backend</h1>
+			</section>
+
+			<section data-background="img/white.png">
+				<h1 class="small-title">Configuration</h1>
+				<ul>
+					<li>Import du HttpClientModule dans AppModule</li>
+					<li>Injection du HttpClient dans notre service</li>
+				</ul>
+			</section>
+
+			<section data-background="img/white.png">
+				<h1 class="small-title">Get</h1>
+				<pre><code class="hljs">this.httpClient.post('https://.....')</code></pre>
+				<blockquote>Attention, les méthode de httClient retournent des Observables et non la donnée directement.
+				Une bonne pratique est de préciser le type d'observable retourné par le serveur pour éviter les erreurs.</blockquote>
+			</section>
+
+			<section data-background="img/white.png">
+				<h1 class="small-title">Post</h1>
+				<p>Seule différence, le second paramètre est l'objet que l'on souhaite envoyer au backend.</p>
+				<pre><code class="hljs">this.httpClient.post('https://.....', this.varidable)</code></pre>
+				<p class="fragment">Même synthaxe pour Push et Put.</p>
+			</section>
+
+			<section data-background-color="#ffd64b" data-background-transition="zoom">
+				<h1 class="red small-title">TP récupération de la liste d'étudiants</h1>
 			</section>
 		</section>
 
