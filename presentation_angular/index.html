@@ -659,14 +659,61 @@
 
 			<section data-background="img/white.png">
 				<h1 class="small-title">Observables</h1>
+				<p>Emet des informations dans le temps</p>
+				<p style="text-align: left">Exemples :</p>
+				<ul>
+					<li>Champ text</li>
+					<li>Progression chargement fichier</li>
+					<li>Communications http</li>
+				</ul>
+			</section>
+
+			<section data-background="img/white.png">
+				<h1 class="small-title">Observer</h1>
+				<p>Code exécuté à chaque fois que l'observable émet une information</p>
+				<p style="text-align: left">L'observable envoie :</p>
+				<ul>
+					<li>Informations</li>
+					<li>Erreur</li>
+					<li>Complete (il n'émettra plus)</li>
+				</ul>
+			</section>
+
+			<section data-background="img/white.png">
+				<h1 class="small-title">Exemple</h1>
+				<pre><code class="hljs js">const counter = Observable.interval(1000);</code></pre>
+				<p>Émet un chiffre toutes les 1000 milisecondes</p>
+				<pre><code class="hljs java">counter.subscribe(
+	(value: number) => {this.secondes = value},
+	(error: any) => {console.log('une erreur a été rencontrée')},
+	() => {console.log('Observable complétée !')
+});</code></pre>
+				<p>Stock la valeur émise chaque seconde dans <em>this.value</em></p>
+
 			</section>
 
 			<section data-background="img/white.png">
 				<h1 class="small-title">Subscriptions</h1>
+				<p>Pour le moment : souscription non enregistrée</p>
+				<p>Continue à l'infini : comportements inattendus</p>
+				<blockquote>Généralement, les Observables fournis par Angular se suppriment lors de la destruction du component.</blockquote>
+			</section>
+
+			<section data-background="img/white.png">
+				<h1 class="small-title">Subscriptions Personnalisées</h1>
+				<pre><code class="hljs">this.counterSubscription = counter.subscribe();</code></pre>
+				<pre><code class="hljs">export class MyComponent implements OnDestroy {
+  ngOnDestroy() {
+	this.counterSubscription.unsubscribe();
+  }
+}</code></pre>
 			</section>
 
 			<section data-background="img/white.png">
 				<h1 class="small-title">Subjects</h1>
+				<p>Réagit aux nouvelles informations</p>
+				<p class="fragment">Peut aussi en émettre !</p>
+				<p>Exemple dans un service : Peut être modifié par un service et fait réagire tous les autres.</p>
 			</section>
 
 			<section data-background="img/white.png">
@@ -824,34 +871,36 @@ onClic() {
 					<li>Duplication de code</li>
 					<li>Plus d'erreurs</li>
 				</ul>
-				<pre><code class="hljs text">canActivate</code></pre>
 			</section>
 
 			<section data-background="img/white.png">
 				<h1 class="small-title">Guards</h1>
 				<blockquote>Guard : Service exécuté lors de l'accès à une route.</blockquote>
-				<p>Doit implémenter canActivate</p>
-				<p>Avec ce qu'on connait : ngOnInit() de chaque composant.</p>
-				<pre><code class="hljs text">canActivate</code></pre>
+				<p class="fragment">Doit implémenter canActivate</p>
+				<p class="fragment">Avec ce qu'on connait : ngOnInit() de chaque composant.</p>
 			</section>
 
 			<section data-background="img/white.png">
 				<h1 class="small-title">Guards</h1>
-				<pre><code class="hljs text">import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot } from '@angular/router';
+				<pre><code class="hljs js">import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 export class MyGuard implements CanActivate {
   canActivate(
 	route: ActivatedRouteSnapshot,
-	state: RouterStateSnapshot): Observable<boolean> {
+	state: RouterStateSnapshot): Observable &lt;boolean&gt; {
   }
 }</code></pre>
+				<blockquote class="fragment" style="margin-top:40px;">CanActivate peut aussi retourner une Promise ou un boolean</blockquote>
 			</section>
 
 			<section data-background-color="#ffd64b" data-background-transition="zoom">
 				<h1 class="red">TP</h1>
-				<p>Création d'une route <code style="background-color: #ddd; color: var(--red)">'/nouveau'</code>
-					et d'une route <code style="background-color: #ddd; color: var(--red)">'/etudiant/:id'</code></p>
+				<p>Création de deux routes :</p>
+				<ul>
+					<li><code style="background-color: #eee; color: var(--red)">'/nouveau'</code></li>
+					<li><code style="background-color: #eee; color: var(--red)">'/etudiant/:id'</code></li>
+				</ul>
 			</section>
 
 		</section>

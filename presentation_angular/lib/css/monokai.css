@@ -24,7 +24,7 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 }
 
 .hljs-class .hljs-title {
-  color: white;
+  color: var(--purple);
 }
 
 .hljs-attribute,
