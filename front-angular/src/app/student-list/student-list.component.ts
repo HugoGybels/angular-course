@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {StudentService} from '../student.service';
 import {Student} from '../model/student.model';
+import {StudentService} from '../service/student.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-student-list',
@@ -10,22 +11,28 @@ import {Student} from '../model/student.model';
 export class StudentListComponent implements OnInit {
 
   public students: Student[] = [];
+  private studentsSubscription: Subscription;
 
-  constructor(private studentService: StudentService) { }
-
-  ngOnInit() {
-    this.studentService.getAllStudents().subscribe(data => this.students = data);
-
+  constructor(private studentService: StudentService) {
   }
 
-  public add() {
-    this.studentService.saveStudent(new Student({
-      nom: 'ttt',
-      prenom: 'rrr',
-      email: 'eee',
-      filename: 'NRV.PNG',
-      age: 10
-    })).subscribe();
+  ngOnInit() {
+    this.studentsSubscription = this.studentService.getStudents().subscribe(
+      (students: Student[]) => this.students = students,
+      e => console.error(e)
+    );
+  }
+
+  public fold() {
+    this.students.forEach(student => {
+      student.folded = false;
+    });
+  }
+
+  public unfold() {
+    this.students.forEach(student => {
+      student.folded = true;
+    });
   }
 
 }

@@ -16,6 +16,7 @@ export class Student {
   age?: number;
   email?: string;
   filename?: string;
+  folded = false;
 
   constructor(json: Partial<StudentDTO>) {
     assign(this, json);

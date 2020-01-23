@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Student} from '../model/student.model';
-import {StudentService} from '../student.service';
 
 @Component({
   selector: 'app-student-card',
@@ -16,6 +15,10 @@ export class StudentCardComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  public toggleFolded() {
+    this.student.folded = ! this.student.folded;
   }
 
 }

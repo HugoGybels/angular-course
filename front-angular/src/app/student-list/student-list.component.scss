@@ -1,51 +1,8 @@
 :host {
   display: block;
 
-  #recherche {
-    display: flex;
-    justify-content: center;
-
-    input {
-      width: 50%;
-      line-height: 2.5em;
-      margin: 20px;
-    }
-  }
-
   #cards-container {
-    width: 100%;
     display: flex;
-  }
-
-  #add-button {
-    border: none;
-    font-size: 16px;
-    height: 3.5em;
-    width: 3.5em;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 50%;
-    background-color: #4abdac;
-    color: white;
-    cursor: pointer;
-
-    &:after,
-    &:before {
-      content: "";
-      display: block;
-      background-color: white;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      height: 1.5em;
-      width: 0.3em;
-      transform: translate(-50%, -50%);
-    }
-
-    &:after {
-      height: 0.3em;
-      width: 1.5em;
-    }
+    flex-wrap: wrap;
   }
 }
