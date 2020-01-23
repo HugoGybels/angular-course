@@ -67,11 +67,4 @@ public class Student {
 		this.filename = filename;
 	}
 
-	public LocalDateTime getNaissance() {
-		return naissance;
-	}
-
-	public void setNaissance(LocalDateTime naissance) {
-		this.naissance = naissance;
-	}
 }
