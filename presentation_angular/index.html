@@ -1,916 +1,916 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>Angular</title>
+    <title>Angular</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/sqli.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/sqli.css">
 
-	<link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
 
-	<!-- Printing and PDF exports -->
-	<script>
-		var link = document.createElement( 'link' );
-		link.rel = 'stylesheet';
-		link.type = 'text/css';
-		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-		document.getElementsByTagName( 'head' )[0].appendChild( link );
-	</script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
 </head>
 <body>
 <div class="reveal">
-	<div class="slides">
+    <div class="slides">
 
-		<!--		&lt;!&ndash;-->
-		<!--            Chapitre 0-->
-		<!--        &ndash;&gt;-->
-		<!--		<section class="section-title" data-background="img/background-1.jpg">-->
-		<!--			<h1>Jacadémie</h1>-->
-		<!--			<div class="flex">-->
-		<!--				<p>Hugo Gybels</p>-->
-		<!--				<img src="img/id.jfif" />-->
-		<!--				<p>hgybels@sqli.com</p>-->
-		<!--			</div>-->
-		<!--			<h2><img src="img/angular.png" />Angular</h2>-->
-		<!--		</section>-->
-		<!--		<section>-->
-		<!--			<h1>Vous ?</h1>-->
-		<!--		</section>-->
-		<!--		<section data-background="img/white.png">-->
-		<!--			<h1>Objectifs</h1>-->
-		<!--			<ul>-->
-		<!--				<li>Qu'est ce qu'Angular ?</li>-->
-		<!--				<li>Avantages et inconvénients</li>-->
-		<!--				<li>Contexte et enjeux</li>-->
-		<!--			</ul>-->
-		<!--			<h2 class="fragment" style="color:var(&#45;&#45;blue); margin-top: 50px;">→ Pratiquer</h2>-->
-		<!--		</section>-->
-		<!--		<section data-background="img/white.png">-->
-		<!--			<h1>L'agenda de la journée</h1>-->
-		<!--			<ul>-->
-		<!--				<li>8h - 9h30 : Introduction à Angular</li>-->
-		<!--				<li>9h30 - 12h : TP première application, composant</li>-->
-		<!--				<li>13h30 - 15h : Notions de base ou plus</li>-->
-		<!--				<li>15h - 16h30 : TP trombi et service</li>-->
-		<!--			</ul>-->
-		<!--		</section>-->
+        <!--
+            Chapitre 0
+        -->
+        <section class="section-title" data-background="img/background-1.jpg">
+            <h1>Jacadémie</h1>
+            <div class="flex">
+                <p>Hugo Gybels</p>
+                <img src="img/id.jfif" />
+                <p>hgybels@sqli.com</p>
+            </div>
+            <h2><img src="img/angular.png" />Angular</h2>
+        </section>
+        <section>
+            <h1>Vous ?</h1>
+        </section>
+        <section data-background="img/white.png">
+            <h1>Objectifs</h1>
+            <ul>
+                <li>Qu'est ce qu'Angular ?</li>
+                <li>Avantages et inconvénients</li>
+                <li>Contexte et enjeux</li>
+            </ul>
+            <h2 class="fragment" style="color:var(--blue); margin-top: 50px;">→ Pratiquer</h2>
+        </section>
+        <section data-background="img/white.png">
+            <h1>L'agenda de la journée</h1>
+            <ul>
+                <li>8h - 9h30 : Introduction à Angular</li>
+                <li>9h30 - 12h : TP première application, composant</li>
+                <li>13h30 - 15h : Notions de base ou plus</li>
+                <li>15h - 16h30 : TP trombi et service</li>
+            </ul>
+        </section>
 
-		<!--		&lt;!&ndash;-->
-		<!--            Chapitre 1-->
-		<!--        &ndash;&gt;-->
-		<!--		<section>-->
-		<!--			<section data-background="img/background-1.jpg">-->
-		<!--				<h1>CHAPITRE 1</h1>-->
-		<!--				<h2>Le web et ses frameworks</h2>-->
-		<!--			</section>-->
-		<!--			<section data-background-color="#371450" data-background-transition="zoom">-->
-		<!--				<h1 class="red">Contexte</h1>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Un peu d'histoire</h1>-->
-		<!--				<p class="fragment">1990 : HTML</p>-->
-		<!--				<p class="fragment">1998 : CSS</p>-->
-		<!--				<p class="fragment">2000 : Javascript</p>-->
-		<!--				<p class="fragment">2020 : ???</p>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Problématiques</h1>-->
-		<!--				<ul>-->
-		<!--					<li>Taille des applications</li>-->
-		<!--					<li>Complexité</li>-->
-		<!--					<li>Temps de développement</li>-->
-		<!--					<li>Nombre de développeurs</li>-->
-		<!--					<li>Maintenabilité et évolutivité</li>-->
-		<!--				</ul>-->
-		<!--			</section>-->
-		<!--			<section data-background="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif">-->
-		<!--				<h1 class="red">Framework</h1>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Framework ?</h1>-->
-		<!--				<div class="fragment">-->
-		<!--					<p>Anglais : "Cadre de travail"</p>-->
-		<!--					<p>Application, jeu, site web, css, serveur, langage, etc.</p>-->
-		<!--					<p>Standards et formalisation : <span class="purple">Partage et réutilisation du code</span></p>-->
-		<!--					<p>Simplifier la vie des dev</p>-->
-		<!--					<p>Architecture et outils : <span class="purple">Ne pas réinventer la roue</span></p>-->
-		<!--				</div>-->
-		<!--				<p class="fragment">Pas forcément orienté débutant</p>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png" class="framework-existant">-->
-		<!--				<h1>Franmworks existants</h1>-->
-		<!--				<p>Vue, React, Angular</p>-->
-		<!--				<div class="flex">-->
-		<!--					<img src="img/vuejs.png">-->
-		<!--					<img src="img/react.png">-->
-		<!--					<img src="img/angular.png">-->
-		<!--				</div>-->
-		<!--			</section>-->
-		<!--		</section>-->
+        <!--
+            Chapitre 1
+        -->
+        <section>
+            <section data-background="img/background-1.jpg">
+                <h1>CHAPITRE 1</h1>
+                <h2>Le web et ses frameworks</h2>
+            </section>
+            <section data-background-color="#371450" data-background-transition="zoom">
+                <h1 class="red">Contexte</h1>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Un peu d'histoire</h1>
+                <p class="fragment">1990 : HTML</p>
+                <p class="fragment">1998 : CSS</p>
+                <p class="fragment">2000 : Javascript</p>
+                <p class="fragment">2020 : ???</p>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Problématiques</h1>
+                <ul>
+                    <li>Taille des applications</li>
+                    <li>Complexité</li>
+                    <li>Temps de développement</li>
+                    <li>Nombre de développeurs</li>
+                    <li>Maintenabilité et évolutivité</li>
+                </ul>
+            </section>
+            <section data-background="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif">
+                <h1 class="red">Framework</h1>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Framework ?</h1>
+                <div class="fragment">
+                    <p>Anglais : "Cadre de travail"</p>
+                    <p>Application, jeu, site web, css, serveur, langage, etc.</p>
+                    <p>Standards et formalisation : <span class="purple">Partage et réutilisation du code</span></p>
+                    <p>Simplifier la vie des dev</p>
+                    <p>Architecture et outils : <span class="purple">Ne pas réinventer la roue</span></p>
+                </div>
+                <p class="fragment">Pas forcément orienté débutant</p>
+            </section>
+            <section data-background="img/white.png" class="framework-existant">
+                <h1>Franmworks existants</h1>
+                <p>Vue, React, Angular</p>
+                <div class="flex">
+                    <img src="img/vuejs.png">
+                    <img src="img/react.png">
+                    <img src="img/angular.png">
+                </div>
+            </section>
+        </section>
 
-		<!--		&lt;!&ndash;-->
-		<!--            Chapitre 2-->
-		<!--        &ndash;&gt;-->
-		<!--		<section>-->
-		<!--			<section data-background="img/background-1.jpg">-->
-		<!--				<h1>CHAPITRE 2</h1>-->
-		<!--				<h2>Angular</h2>-->
-		<!--			</section>-->
-		<!--			<section data-background-color="#eb2859" data-background-transition="zoom">-->
-		<!--				<h1 class="white">Introduction</h1>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Pourquoi Angular ?</h1>-->
-		<!--				<ul>-->
-		<!--					<li>Géré par Google</li>-->
-		<!--					<li>Performant</li>-->
-		<!--					<li>Mature</li>-->
-		<!--					<li>TypeScript</li>-->
-		<!--					<li>Bibliothèques riches</li>-->
-		<!--					<li>Ionic</li>-->
-		<!--				</ul>-->
-		<!--				<p class="fragment highlight-purple">Temps d'apprentissage assez élevé</p>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Angular</h1>-->
-		<!--				<p>Première version AngularJs</p>-->
-		<!--				<p class="fragment">Table rase avec <b>Angular 2</b></p>-->
-		<!--				<div class="fragment">-->
-		<!--					<p>TypeScript</p>-->
-		<!--					<p>Single Page Application (bureau et mobile)</p>-->
-		<!--					<p>Nouvelles versions : Performance, Normes web, productivité</p>-->
-		<!--				</div>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Single Page Application</h1>-->
-		<!--				<p>Application web</p>-->
-		<!--				<p>Imite une application native</p>-->
-		<!--				<p>Pas de rafraîchissement</p>-->
-		<!--				<p>Temps de chargement réduits</p>-->
-		<!--				<p class="fragment highlight-purple"><b>→ UI moins "internet"</b></p>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Typescript</h1>-->
-		<!--				<p class="fragment">Un "superset" de Javascript (transcompilé)</p>-->
-		<!--				<p class="fragment">Langage strict</p>-->
-		<!--				<p class="fragment">Typage des variables / fonctions</p>-->
-		<!--				<p class="fragment">Fonctions lambda (arrow)</p>-->
-		<!--				<p class="fragment">Classes et interfaces</p>-->
-		<!--				<p class="fragment highlight-purple">Bien d'autre : <a href="https://www.typescriptlang.org/docs/home.html">https://www.typescriptlang.org/docs/home.html</a></p>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>SCSS</h1>-->
-		<!--				<div style="display: flex">-->
-		<!--					<div style="width: 50%">-->
-		<!--						<p>CSS</p>-->
-		<!--						<pre><code class="hljs">-->
-		<!--.first-class h2 {-->
-		<!--  color: pink;-->
-		<!--}-->
-		<!--.first-class .is-active {-->
-		<!--  background-color: #EEE;-->
-		<!--}-->
-		<!--								</code></pre>-->
-		<!--					</div>-->
-		<!--					<div style="width: 50%">-->
-		<!--						<p>SCSS</p>-->
-		<!--						<pre><code class="hljs">-->
-		<!--.first-class {-->
-		<!--  h2 {-->
-		<!--    color: $main-color;-->
-		<!--  }-->
-		<!--  .is-active {-->
-		<!--    background-color: #EEE;-->
-		<!--  }-->
-		<!--}-->
-		<!--								</code></pre>-->
-		<!--					</div>-->
-		<!--				</div>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>SCSS</h1>-->
-		<!--				<ul>-->
-		<!--					<li>Variables (locales et globales)</li>-->
-		<!--					<li>Import de fichiers</li>-->
-		<!--					<li>Imbrication des règles</li>-->
-		<!--					<li>Fonctions</li>-->
-		<!--					<li>Boucles</li>-->
-		<!--					<li>Conditions</li>-->
-		<!--					<li>Mixin</li>-->
-		<!--					<li>...</li>-->
-		<!--				</ul>-->
-		<!--			</section>-->
-		<!--		</section>-->
+        <!--
+            Chapitre 2
+        -->
+        <section>
+            <section data-background="img/background-1.jpg">
+                <h1>CHAPITRE 2</h1>
+                <h2>Angular</h2>
+            </section>
+            <section data-background-color="#eb2859" data-background-transition="zoom">
+                <h1 class="white">Introduction</h1>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Pourquoi Angular ?</h1>
+                <ul>
+                    <li>Géré par Google</li>
+                    <li>Performant</li>
+                    <li>Mature</li>
+                    <li>TypeScript</li>
+                    <li>Bibliothèques riches</li>
+                    <li>Ionic</li>
+                </ul>
+                <p class="fragment highlight-purple">Temps d'apprentissage assez élevé</p>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Angular</h1>
+                <p>Première version AngularJs</p>
+                <p class="fragment">Table rase avec <b>Angular 2</b></p>
+                <div class="fragment">
+                    <p>TypeScript</p>
+                    <p>Single Page Application (bureau et mobile)</p>
+                    <p>Nouvelles versions : Performance, Normes web, productivité</p>
+                </div>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Single Page Application</h1>
+                <p>Application web</p>
+                <p>Imite une application native</p>
+                <p>Pas de rafraîchissement</p>
+                <p>Temps de chargement réduits</p>
+                <p class="fragment highlight-purple"><b>→ UI moins "internet"</b></p>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Typescript</h1>
+                <p class="fragment">Un "superset" de Javascript (transcompilé)</p>
+                <p class="fragment">Langage strict</p>
+                <p class="fragment">Typage des variables / fonctions</p>
+                <p class="fragment">Fonctions lambda (arrow)</p>
+                <p class="fragment">Classes et interfaces</p>
+                <p class="fragment highlight-purple">Bien d'autre : <a href="https://www.typescriptlang.org/docs/home.html">https://www.typescriptlang.org/docs/home.html</a></p>
+            </section>
+            <section data-background="img/white.png">
+                <h1>SCSS</h1>
+                <div style="display: flex">
+                    <div style="width: 50%">
+                        <p>CSS</p>
+                        <pre><code class="hljs">
+		.first-class h2 {
+		  color: pink;
+		}
+		.first-class .is-active {
+		  background-color: #EEE;
+		}
+										</code></pre>
+                    </div>
+                    <div style="width: 50%">
+                        <p>SCSS</p>
+                        <pre><code class="hljs">
+		.first-class {
+		  h2 {
+		    color: $main-color;
+		  }
+		  .is-active {
+		    background-color: #EEE;
+		  }
+		}
+										</code></pre>
+                    </div>
+                </div>
+            </section>
+            <section data-background="img/white.png">
+                <h1>SCSS</h1>
+                <ul>
+                    <li>Variables (locales et globales)</li>
+                    <li>Import de fichiers</li>
+                    <li>Imbrication des règles</li>
+                    <li>Fonctions</li>
+                    <li>Boucles</li>
+                    <li>Conditions</li>
+                    <li>Mixin</li>
+                    <li>...</li>
+                </ul>
+            </section>
+        </section>
 
-		<!--		&lt;!&ndash;-->
-		<!--            Chapitre 3-->
-		<!--        &ndash;&gt;-->
-		<!--		<section>-->
-		<!--			<section data-background="img/background-1.jpg">-->
-		<!--				<h1>CHAPITRE 3</h1>-->
-		<!--				<h2>TP : Première application</h2>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Objectif</h1>-->
-		<!--				<img src="img/obj-final.PNG" alt="obj-final"/>-->
-		<!--			</section>-->
-		<!--			<section data-background-color="#371450" data-background-transition="zoom">-->
-		<!--				<h1 class="red">Environnement de développement</h1>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>NodeJS - NPM</h1>-->
-		<!--				<div id="nodejsnom-container">-->
-		<!--					<div id="nodejs">-->
-		<!--						<p>NodeJs</p>-->
-		<!--						<img src="img/nodejs.png" alt="nodejs"/>-->
-		<!--						<p>serveur</p>-->
-		<!--					</div>-->
-		<!--					<div id="npm">-->
-		<!--						<p>Npm</p>-->
-		<!--						<img src="img/npm.png" alt="npm"/>-->
-		<!--						<p>Gestionnaire de paquets</p>-->
-		<!--					</div>-->
-		<!--				</div>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Angular CLI</h1>-->
-		<!--				<code class="hljs atom-one-light">npm install -g @angular/cli</code>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png" id="cmd-base">-->
-		<!--				<h1 class="small-title">Commandes de base</h1>-->
-		<!--				<ul>-->
-		<!--					<li class="fragment">-->
-		<!--						<code class="hljs atom-one-light">ng new app &#45;&#45;style=-->
-		<!--							css|scss|sass|less|styl &#45;&#45;routing=true|false</code>-->
-		<!--						<b>Génère un nouveau projet</b>-->
-		<!--					</li>-->
-		<!--					<li class="fragment">-->
-		<!--						<code class="hljs atom-one-light">ng generate composant|service|module</code>-->
-		<!--						<b>Génère un nouveau composant, service ou module</b>-->
-		<!--					</li>-->
-		<!--					<li class="fragment">-->
-		<!--						<code class="hljs atom-one-light">ng serve</code>-->
-		<!--						<b>Lance l'application en local</b>-->
-		<!--					</li>-->
-		<!--					<li class="fragment">-->
-		<!--						<code class="hljs atom-one-light">ng test</code>-->
-		<!--						<b>Lance les tests du projet</b>-->
-		<!--					</li>-->
-		<!--				</ul>-->
-		<!--			</section>-->
-		<!--			<section data-background-color="#371450" data-background-transition="zoom">-->
-		<!--				<h1 class="red">Initialiser une application</h1>-->
-		<!--			</section>-->
-		<!--			<section>-->
-		<!--				<img src="img/new-app.PNG" alt="new-app"/>-->
-		<!--			</section>-->
-		<!--			<section>-->
-		<!--				<h1>Ng Serve</h1>-->
-		<!--				<img src="img/ng-serve.PNG" alt="ng-serve"/>-->
-		<!--				<p>Lance l'application en local</p>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/localhost.PNG" data-background-transition="slide">-->
-		<!--			</section>-->
-		<!--		</section>-->
-		<!--		-->
-		<!--		&lt;!&ndash;-->
-		<!--            Chapitre 4-->
-		<!--        &ndash;&gt;-->
-		<!--		<section data-background="img/white.png">-->
-		<!--			<section data-background="img/background-1.jpg">-->
-		<!--				<h1>CHAPITRE 4</h1>-->
-		<!--				<h2>Composants et modules</h2>-->
-		<!--			</section>-->
-		<!--			<section data-background-color="#55beea" data-background-transition="zoom">-->
-		<!--				<h1 class="purple">Composants</h1>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<img src="img/composants.png" alt="exemple de composant" />-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<img src="img/composants-highlighted.png" alt="exemple de composant" />-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Composant</h1>-->
-		<!--				<p>Élément réutilisable de l'application</p>-->
-		<!--				<ul>-->
-		<!--					<li>Une vue</li>-->
-		<!--					<li>Un ensemble de traitements</li>-->
-		<!--					<li>Un syle assicié à la vue</li>-->
-		<!--					<li class="fragment">des tests</li>-->
-		<!--				</ul>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Composant</h1>-->
-		<!--				<img src="img/composant-struct.PNG" alt="exemple de composant" style="width: 70%">-->
-		<!--			</section>-->
-		<!--			<section data-background="img/composant-files.PNG" >-->
-		<!--			</section>-->
-		<!--			<section>-->
-		<!--				<pre><code class="hljs language-html">-->
-		<!--<app-hello-world></app-hello-world>-->
-		<!--				</code></pre>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>cycle de vie</h1>-->
-		<!--				<ul>-->
-		<!--					<li><b>constructor() :</b>-->
-		<!--						<p>Appelée avant tout autre fonction</p></li>-->
-		<!--					<li><b>ngOnInit() : </b>-->
-		<!--						<p>Appelée après le constructeur</p></li>-->
-		<!--				</ul>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>cycle de vie</h1>-->
-		<!--				<ul>-->
-		<!--					<li><b>ngOnChanges() :</b>-->
-		<!--						<p>Appelée après chaque changement des propriétés @Input et avant tout traitement de la vue</p></li>-->
-		<!--					<li><b>ngOnDestroy() :</b>-->
-		<!--						<p>Appelée une fois, avant que l’instance soit détruite.</p></li>-->
-		<!--					<li>...</li>-->
-		<!--				</ul>-->
-		<!--				<p><a href="https://angular.io/guide/lifecycle-hooks">https://angular.io/guide/lifecycle-hooks</a></p>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1 class="small-title">Binding du template</h1>-->
-		<!--				<p>Toutes les interactions dans l'HTML</p>-->
-		<!--				<ul>-->
-		<!--					<li class="fragment"><b>{{}}</b> pour le binding one way</li>-->
-		<!--					<li class="fragment"><b>*</b> pour les directives angular</li>-->
-		<!--					<li class="fragment"><b>[]</b> pour le binding de propriété</li>-->
-		<!--					<li class="fragment"><b>()</b> pour le binding d'évènement</li>-->
-		<!--					<li class="fragment"><b>#</b> pour la déclaration de variable</li>-->
-		<!--				</ul>-->
-		<!--			</section>-->
-		<!--			<section>-->
-		<!--				<h1 class="small-title">Binding du template</h1>-->
-		<!--				<ul>-->
-		<!--					<li>Le composant est une classe</li>-->
-		<!--					<li>On utilise {{}} pour effectuer un binding one way</li>-->
-		<!--				</ul>-->
-		<!--				<div style="display: flex; align-items: center;">-->
-		<!--					<div><pre><code class="hljs">-->
-		<!--export class MyComponent {-->
-		<!--	public ﬁrstname = ‘Sylvain’;-->
-		<!--	public lastname = ‘Dupont’;-->
-		<!--}-->
-		<!--					</code></pre></div>-->
-		<!--					<div><pre><code class="hljs">-->
-		<!--<span>{{ﬁrstname}}</span>-->
-		<!--<span>{{lastname}}</span>-->
-		<!--					</code></pre></div>-->
-		<!--				</div>-->
-		<!--			</section>-->
-		<!--			<section data-background-color="#55beea" data-background-transition="zoom">-->
-		<!--				<h1>Création d'un composant</h1>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.PNG">-->
-		<!--				<img src="img/TP-componant.PNG" alt="tp-componant" />-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.PNG">-->
-		<!--				<h1 class="small-title">Création d'un composant</h1>-->
-		<!--				<pre><code class="hljs">-->
-		<!--ng generate composant student-card-->
-		<!--				</code></pre>-->
-		<!--				<pre><code class="hljs">-->
-		<!--ng g c student-card-->
-		<!--				</code></pre>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.PNG">-->
-		<!--				<h1>Model</h1>-->
-		<!--				<div><pre><code class="hljs">-->
-		<!--export class Student {-->
-		<!--  id: number;-->
-		<!--  nom: string;-->
-		<!--  prenom: string;-->
-		<!--  age?: number;-->
-		<!--  email?: string;-->
-		<!--  filename?: string;-->
-		<!--}-->
-		<!--				</code></pre></div>-->
-		<!--				<p class="red"><b style="text-decoration: underline">BONNE PRATIQUE :</b> Toujours inclure le type dans le nom du fichier</br/>-->
-		<!--					.component, .service, .pipe, .module, .directive</p>-->
-		<!--			</section>-->
-		<!--			<section data-background-color="#55beea" data-background-transition="zoom">-->
-		<!--				<h1 class="purple">Module</h1>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Module</h1>-->
-		<!--				<p>Découpe une application par fonctionnalité</p>-->
-		<!--				<p>Composé de un ou plusieurs composants</p>-->
-		<!--				<p>Nommage : ajouter le suffix Module (appModule)</p>-->
-		<!--				<p class="fragment">Un SharedModule : Tous les composants utilisés dans plusieurs modules</p>-->
-		<!--				<p class="fragment">Un CoreModule : Les composant à l'initialisation de l'application</p>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<img src="img/module.png" alt="module" />-->
-		<!--			</section>-->
-		<!--		</section>-->
+        <!--
+            Chapitre 3
+        -->
+        <section>
+            <section data-background="img/background-1.jpg">
+                <h1>CHAPITRE 3</h1>
+                <h2>TP : Première application</h2>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Objectif</h1>
+                <img src="img/obj-final.PNG" alt="obj-final"/>
+            </section>
+            <section data-background-color="#371450" data-background-transition="zoom">
+                <h1 class="red">Environnement de développement</h1>
+            </section>
+            <section data-background="img/white.png">
+                <h1>NodeJS - NPM</h1>
+                <div id="nodejsnom-container">
+                    <div id="nodejs">
+                        <p>NodeJs</p>
+                        <img src="img/nodejs.png" alt="nodejs"/>
+                        <p>serveur</p>
+                    </div>
+                    <div id="npm">
+                        <p>Npm</p>
+                        <img src="img/npm.png" alt="npm"/>
+                        <p>Gestionnaire de paquets</p>
+                    </div>
+                </div>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Angular CLI</h1>
+                <code class="hljs atom-one-light">npm install -g @angular/cli</code>
+            </section>
+            <section data-background="img/white.png" id="cmd-base">
+                <h1 class="small-title">Commandes de base</h1>
+                <ul>
+                    <li class="fragment">
+                        <code class="hljs atom-one-light">ng new app --style=
+                            css|scss|sass|less|styl --routing=true|false</code>
+                        <b>Génère un nouveau projet</b>
+                    </li>
+                    <li class="fragment">
+                        <code class="hljs atom-one-light">ng generate composant|service|module</code>
+                        <b>Génère un nouveau composant, service ou module</b>
+                    </li>
+                    <li class="fragment">
+                        <code class="hljs atom-one-light">ng serve</code>
+                        <b>Lance l'application en local</b>
+                    </li>
+                    <li class="fragment">
+                        <code class="hljs atom-one-light">ng test</code>
+                        <b>Lance les tests du projet</b>
+                    </li>
+                </ul>
+            </section>
+            <section data-background-color="#371450" data-background-transition="zoom">
+                <h1 class="red">Initialiser une application</h1>
+            </section>
+            <section>
+                <img src="img/new-app.PNG" alt="new-app"/>
+            </section>
+            <section>
+                <h1>Ng Serve</h1>
+                <img src="img/ng-serve.PNG" alt="ng-serve"/>
+                <p>Lance l'application en local</p>
+            </section>
+            <section data-background="img/localhost.PNG" data-background-transition="slide">
+            </section>
+        </section>
 
-		<!--		&lt;!&ndash;-->
-		<!--            Chapitre 5-->
-		<!--        &ndash;&gt;-->
-		<!--		<section>-->
-		<!--			<section data-background="img/background-1.jpg">-->
-		<!--				<h1>CHAPITRE 5</h1>-->
-		<!--				<h2>Binding et template</h2>-->
-		<!--			</section>-->
-		<!--			<section data-background-color="#ffd64b" data-background-transition="zoom">-->
-		<!--				<h1 class="red">Le binding one way</h1>-->
-		<!--				<pre><code class="hljs"><p>{{propriété publique}}</p></code></pre>-->
-		<!--			</section>-->
-		<!--			<section data-background-color="#ffd64b" data-background-transition="zoom">-->
-		<!--				<h1 class="red">Directives angular</h1>-->
-		<!--				<pre><code class="hljs"><p *ngXXX="XXXXXXXXX">Bla bla bla</p></code></pre>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Conditions</h1>-->
-		<!--				<p>*ngIf="condition"</p>-->
-		<!--				<ul>-->
-		<!--					<li style="margin-bottom: 20px;">-->
-		<!--						html :-->
-		<!--						<pre style="margin: 0;width: 100%;"><code class="hljs"><div *ngIf="showMessage == true">{{message}}</div></code></pre>-->
-		<!--					</li>-->
-		<!--					<li>-->
-		<!--						ts :-->
-		<!--						<pre style="margin: 0;width: 100%;"><code class="hljs">public showMessage = false;-->
-		<!--public message = 'Bonjour à tous !';-->
-		<!--				</code></pre>-->
-		<!--					</li>-->
-		<!--				</ul>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Les boucles</h1>-->
-		<!--				<p>Utilisation de <b>*ngFor</b></p>-->
-		<!--				<p>Synthaxe : <pre style="margin: 0;width: 100%;"><code class="hljs"><div *ngFor="let item of myCollection">{{item.label}}</div></code></pre></p>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Les boucles</h1>-->
-		<!--				<ul>-->
-		<!--					<li style="margin-bottom: 20px;">-->
-		<!--						html :-->
-		<!--						<pre style="margin: 0;width: 100%;"><code class="hljs"><div *ngFor="let book of library">-->
-		<!--	{{book.titre}} - {{book.auteur}}-->
-		<!--</div></code></pre></code></pre>-->
-		<!--					</li>-->
-		<!--					<li>-->
-		<!--						ts :-->
-		<!--						<pre style="margin: 0;width: 100%;"><code class="hljs">public library: Book[];-->
-		<!--this.library = [{-->
-		<!--	titre: 'Angular pour les nuls',-->
-		<!--	auteur: 'Bruno Sauviac'-->
-		<!--},{-->
-		<!--	titre: 'Angular pour les pros',-->
-		<!--	auteur: 'Jacques Fayolle'-->
-		<!--}];-->
-		<!--							</code></pre>-->
-		<!--					</li>-->
-		<!--				</ul>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1>Les boucles</h1>-->
-		<!--				<p>Variables disponibles : <b>index, first, last, even, odd</b></p>-->
-		<!--				<pre style="margin: 0;width: 100%;"><code class="hljs">-->
-		<!--this.persons = [ ‘Thomas’, ‘Pierre’, ‘Valentin’ ];-->
+        <!--
+            Chapitre 4
+        -->
+        <section data-background="img/white.png">
+            <section data-background="img/background-1.jpg">
+                <h1>CHAPITRE 4</h1>
+                <h2>Composants et modules</h2>
+            </section>
+            <section data-background-color="#55beea" data-background-transition="zoom">
+                <h1 class="purple">Composants</h1>
+            </section>
+            <section data-background="img/white.png">
+                <img src="img/composants.png" alt="exemple de composant" />
+            </section>
+            <section data-background="img/white.png">
+                <img src="img/composants-highlighted.png" alt="exemple de composant" />
+            </section>
+            <section data-background="img/white.png">
+                <h1>Composant</h1>
+                <p>Élément réutilisable de l'application</p>
+                <ul>
+                    <li>Une vue</li>
+                    <li>Un ensemble de traitements</li>
+                    <li>Un syle assicié à la vue</li>
+                    <li class="fragment">des tests</li>
+                </ul>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Composant</h1>
+                <img src="img/composant-struct.PNG" alt="exemple de composant" style="width: 70%">
+            </section>
+            <section data-background="img/composant-files.PNG" >
+            </section>
+            <section>
+						<pre><code class="hljs language-html">
+		<app-hello-world></app-hello-world>
+						</code></pre>
+            </section>
+            <section data-background="img/white.png">
+                <h1>cycle de vie</h1>
+                <ul>
+                    <li><b>constructor() :</b>
+                        <p>Appelée avant tout autre fonction</p></li>
+                    <li><b>ngOnInit() : </b>
+                        <p>Appelée après le constructeur</p></li>
+                </ul>
+            </section>
+            <section data-background="img/white.png">
+                <h1>cycle de vie</h1>
+                <ul>
+                    <li><b>ngOnChanges() :</b>
+                        <p>Appelée après chaque changement des propriétés @Input et avant tout traitement de la vue</p></li>
+                    <li><b>ngOnDestroy() :</b>
+                        <p>Appelée une fois, avant que l’instance soit détruite.</p></li>
+                    <li>...</li>
+                </ul>
+                <p><a href="https://angular.io/guide/lifecycle-hooks">https://angular.io/guide/lifecycle-hooks</a></p>
+            </section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Binding du template</h1>
+                <p>Toutes les interactions dans l'HTML</p>
+                <ul>
+                    <li class="fragment"><b>{{}}</b> pour le binding one way</li>
+                    <li class="fragment"><b>*</b> pour les directives angular</li>
+                    <li class="fragment"><b>[]</b> pour le binding de propriété</li>
+                    <li class="fragment"><b>()</b> pour le binding d'évènement</li>
+                    <li class="fragment"><b>#</b> pour la déclaration de variable</li>
+                </ul>
+            </section>
+            <section>
+                <h1 class="small-title">Binding du template</h1>
+                <ul>
+                    <li>Le composant est une classe</li>
+                    <li>On utilise {{}} pour effectuer un binding one way</li>
+                </ul>
+                <div style="display: flex; align-items: center;">
+                    <div><pre><code class="hljs">
+		export class MyComponent {
+			public ﬁrstname = ‘Sylvain’;
+			public lastname = ‘Dupont’;
+		}
+							</code></pre></div>
+                    <div><pre><code class="hljs">
+		<span>{{ﬁrstname}}</span>
+		<span>{{lastname}}</span>
+							</code></pre></div>
+                </div>
+            </section>
+            <section data-background-color="#55beea" data-background-transition="zoom">
+                <h1>Création d'un composant</h1>
+            </section>
+            <section data-background="img/white.PNG">
+                <img src="img/TP-componant.PNG" alt="tp-componant" />
+            </section>
+            <section data-background="img/white.PNG">
+                <h1 class="small-title">Création d'un composant</h1>
+                <pre><code class="hljs">
+		ng generate composant student-card
+						</code></pre>
+                <pre><code class="hljs">
+		ng g c student-card
+						</code></pre>
+            </section>
+            <section data-background="img/white.PNG">
+                <h1>Model</h1>
+                <div><pre><code class="hljs">
+		export class Student {
+		  id: number;
+		  nom: string;
+		  prenom: string;
+		  age?: number;
+		  email?: string;
+		  filename?: string;
+		}
+						</code></pre></div>
+                <p class="red"><b style="text-decoration: underline">BONNE PRATIQUE :</b> Toujours inclure le type dans le nom du fichier</br/>
+                    .component, .service, .pipe, .module, .directive</p>
+            </section>
+            <section data-background-color="#55beea" data-background-transition="zoom">
+                <h1 class="purple">Module</h1>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Module</h1>
+                <p>Découpe une application par fonctionnalité</p>
+                <p>Composé de un ou plusieurs composants</p>
+                <p>Nommage : ajouter le suffix Module (appModule)</p>
+                <p class="fragment">Un SharedModule : Tous les composants utilisés dans plusieurs modules</p>
+                <p class="fragment">Un CoreModule : Les composant à l'initialisation de l'application</p>
+            </section>
+            <section data-background="img/white.png">
+                <img src="img/module.png" alt="module" />
+            </section>
+        </section>
 
-		<!--<div *ngFor="let person of persons; index as i; first as isFirst">-->
-		<!--	<span *ngIf="!isFirst">;</span>-->
-		<!--	{{ i }} : {{ person }}-->
-		<!--</div>-->
-		<!--				</code></pre>-->
-		<!--				<p class="fragment">0 : Thomas; 1 : Pierre; 2 : Valentin</p>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1 style="text-transform: none">*ngSwitch</h1>-->
-		<!--				<pre><code class="hljs"><div [ngSwitch]="currentItem.feature">-->
-		<!--  <app-stout-item    *ngSwitchCase="'stout'"    [item]="currentItem"></app-stout-item>-->
-		<!--  <app-device-item   *ngSwitchCase="'slim'"     [item]="currentItem"></app-device-item>-->
-		<!--  <app-lost-item     *ngSwitchCase="'vintage'"  [item]="currentItem"></app-lost-item>-->
-		<!--  <app-best-item     *ngSwitchCase="'bright'"   [item]="currentItem"></app-best-item>-->
-		<!--					&lt;!&ndash; . . . &ndash;&gt;-->
-		<!--  <app-unknown-item  *ngSwitchDefault           [item]="currentItem"></app-unknown-item>-->
-		<!--</div></code></pre>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1 style="text-transform: none">ngClass</h1>-->
-		<!--				&lt;!&ndash;				TODO&ndash;&gt;-->
-		<!--			</section>-->
-		<!--			<section data-background-color="#ffd64b" data-background-transition="zoom">-->
-		<!--				<h1 class="red">Les (Built-in) pipes</h1>-->
-		<!--				<a href="https://angular.io/api?type=pipe">https://angular.io/api?type=pipe</a>-->
-		<!--			</section>-->
-		<!--			<section data-background="white.png">-->
-		<!--				<h1 class="small-title">Les pipes</h1>-->
-		<!--				<p>Effectue une transformation directement dans le template</p>-->
-		<!--				<p>En temps réel</p>-->
-		<!--				<ul>-->
-		<!--					<li class="fragment">DatePipe :-->
-		<!--						<pre><code class="hljs">{{ dateObj | date }}               // output : '9 janv. 2020'-->
-		<!--{{ dateObj | date:'medium' }}      // output : '9 janv. 2020 à 18:05:33'-->
-		<!--{{ dateObj | date:'shortTime' }}   // output : '18:05'-->
-		<!--{{ dateObj | date:'mm:ss' }}       // output : '06:09'</code></pre></li>-->
-		<!--				</ul>-->
-		<!--			</section>-->
-		<!--			<section data-background="white.png">-->
-		<!--				<ul>-->
-		<!--					<li >JsonPipe :-->
-		<!--						<pre><code class="hljs">{{ student | json }}-->
-		<!--// {-->
-		<!--// 	"id": 991,-->
-		<!--// 	"nom": "Gybels",-->
-		<!--// 	"prenom": "Hugo",-->
-		<!--// 	"age": 24,-->
-		<!--// 	"email": "hugo.gybels@telecom-st-etienne.fr",-->
-		<!--// 	"filename": "persona-1.PNG"-->
-		<!--// }</code></pre></li>-->
-		<!--					<li>LowerCasePipe / UpperCasePipe : <pre><code class="hljs">{{prenom | uppercase}}  // HUGO</code></pre></li>-->
-		<!--					<li>AsyncPipe : <pre><code class="hljs">{{observable | async}}  // Compliqué</code></pre></li>-->
-		<!--				</ul>-->
-		<!--			</section>-->
-		<!--			<section data-background="white.png">-->
-		<!--				<h1 style="text-transform: none">Écrivez vos propre pipes</h1>-->
-		<!--			</section>-->
-		<!--			<section data-background-color="#ffd64b" data-background-transition="zoom">-->
-		<!--				<h1 class="red">Les inputs / outputs</h1>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1 class="small-title">Les inputs / outputs</h1>-->
-		<!--				<ul>-->
-		<!--					<li style="margin-bottom: 20px;">-->
-		<!--						html :-->
-		<!--						<pre style="margin: 0;width: 100%;"><code class="hljs language-html">&lt;app-my-component [monInput]="variableDuParent"-->
-		<!--                  (somethingHappened)="fonctionDuParent(bool)"&gt;-->
-		<!--&lt;/app-my-component&gt;-->
-		<!--</code></pre>-->
-		<!--					</li>-->
-		<!--					<li>-->
-		<!--						ts :-->
-		<!--						<pre style="margin: 0;width: 100%;"><code class="hljs">@Input()-->
-		<!--public monInput: string;-->
+        <!--
+            Chapitre 5
+        -->
+        <section>
+            <section data-background="img/background-1.jpg">
+                <h1>CHAPITRE 5</h1>
+                <h2>Binding et template</h2>
+            </section>
+            <section data-background-color="#ffd64b" data-background-transition="zoom">
+                <h1 class="red">Le binding one way</h1>
+                <pre><code class="hljs"><p>{{propriété publique}}</p></code></pre>
+            </section>
+            <section data-background-color="#ffd64b" data-background-transition="zoom">
+                <h1 class="red">Directives angular</h1>
+                <pre><code class="hljs"><p *ngXXX="XXXXXXXXX">Bla bla bla</p></code></pre>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Conditions</h1>
+                <p>*ngIf="condition"</p>
+                <ul>
+                    <li style="margin-bottom: 20px;">
+                        html :
+                        <pre style="margin: 0;width: 100%;"><code class="hljs"><div *ngIf="showMessage == true">{{message}}</div></code></pre>
+                    </li>
+                    <li>
+                        ts :
+                        <pre style="margin: 0;width: 100%;"><code class="hljs">public showMessage = false;
+		public message = 'Bonjour à tous !';
+						</code></pre>
+                    </li>
+                </ul>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Les boucles</h1>
+                <p>Utilisation de <b>*ngFor</b></p>
+                <p>Synthaxe : <pre style="margin: 0;width: 100%;"><code class="hljs"><div *ngFor="let item of myCollection">{{item.label}}</div></code></pre></p>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Les boucles</h1>
+                <ul>
+                    <li style="margin-bottom: 20px;">
+                        html :
+                        <pre style="margin: 0;width: 100%;"><code class="hljs"><div *ngFor="let book of library">
+			{{book.titre}} - {{book.auteur}}
+		</div></code></pre></code></pre>
+                    </li>
+                    <li>
+                        ts :
+                        <pre style="margin: 0;width: 100%;"><code class="hljs">public library: Book[];
+		this.library = [{
+			titre: 'Angular pour les nuls',
+			auteur: 'Bruno Sauviac'
+		},{
+			titre: 'Angular pour les pros',
+			auteur: 'Jacques Fayolle'
+		}];
+									</code></pre>
+                    </li>
+                </ul>
+            </section>
+            <section data-background="img/white.png">
+                <h1>Les boucles</h1>
+                <p>Variables disponibles : <b>index, first, last, even, odd</b></p>
+                <pre style="margin: 0;width: 100%;"><code class="hljs">
+		this.persons = [ ‘Thomas’, ‘Pierre’, ‘Valentin’ ];
 
-		<!--@Output-->
-		<!--public somethingHappened = new EventEmitter&lt;void&gt;();</code></pre>-->
-		<!--					</li>-->
-		<!--				</ul>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1 class="small-title">Les inputs / outputs</h1>-->
-		<!--				<p class="fragment"><b class="red">BASE</b> de la communication entre deux composants</p>-->
-		<!--				<p class="fragment">Permet de tout faire</p>-->
-		<!--				<p class="fragment">La data est <b class="red">TOUJOURS</b> gérée par le composant parent</p>-->
-		<!--				<p class="fragment">Les enfants lise l'information et émettent des évènements</p>-->
-		<!--			</section>-->
-		<!--			<section data-background="img/white.png">-->
-		<!--				<h1 class="small-title">TP - Tombi</h1>-->
-		<!--				<ol>-->
-		<!--					<li>Ajouter la date du jour en haut à droite</li>-->
-		<!--					<li>Forcer le nom - prénom en majuscule</li>-->
-		<!--					<li>Créer un composant "conteneur" (list-students)</li>-->
-		<!--					<li>Afficher plusieurs cartes étudiants</li>-->
-		<!--					<li>Extraire la partie détail du composant student-card dans un sous-composant.</li>-->
-		<!--				</ol>-->
-		<!--			</section>-->
-		<!--		</section>-->
+		<div *ngFor="let person of persons; index as i; first as isFirst">
+			<span *ngIf="!isFirst">;</span>
+			{{ i }} : {{ person }}
+		</div>
+						</code></pre>
+                <p class="fragment">0 : Thomas; 1 : Pierre; 2 : Valentin</p>
+            </section>
+            <section data-background="img/white.png">
+                <h1 style="text-transform: none">*ngSwitch</h1>
+                <pre><code class="hljs"><div [ngSwitch]="currentItem.feature">
+		  <app-stout-item    *ngSwitchCase="'stout'"    [item]="currentItem"></app-stout-item>
+		  <app-device-item   *ngSwitchCase="'slim'"     [item]="currentItem"></app-device-item>
+		  <app-lost-item     *ngSwitchCase="'vintage'"  [item]="currentItem"></app-lost-item>
+		  <app-best-item     *ngSwitchCase="'bright'"   [item]="currentItem"></app-best-item>
+                    <!-- . . . -->
+		  <app-unknown-item  *ngSwitchDefault           [item]="currentItem"></app-unknown-item>
+		</div></code></pre>
+            </section>
+            <section data-background="img/white.png">
+                <h1 style="text-transform: none">ngClass</h1>
+                <!--				TODO-->
+            </section>
+            <section data-background-color="#ffd64b" data-background-transition="zoom">
+                <h1 class="red">Les (Built-in) pipes</h1>
+                <a href="https://angular.io/api?type=pipe">https://angular.io/api?type=pipe</a>
+            </section>
+            <section data-background="white.png">
+                <h1 class="small-title">Les pipes</h1>
+                <p>Effectue une transformation directement dans le template</p>
+                <p>En temps réel</p>
+                <ul>
+                    <li class="fragment">DatePipe :
+                        <pre><code class="hljs">{{ dateObj | date }}               // output : '9 janv. 2020'
+		{{ dateObj | date:'medium' }}      // output : '9 janv. 2020 à 18:05:33'
+		{{ dateObj | date:'shortTime' }}   // output : '18:05'
+		{{ dateObj | date:'mm:ss' }}       // output : '06:09'</code></pre></li>
+                </ul>
+            </section>
+            <section data-background="white.png">
+                <ul>
+                    <li >JsonPipe :
+                        <pre><code class="hljs">{{ student | json }}
+		// {
+		// 	"id": 991,
+		// 	"nom": "Gybels",
+		// 	"prenom": "Hugo",
+		// 	"age": 24,
+		// 	"email": "hugo.gybels@telecom-st-etienne.fr",
+		// 	"filename": "persona-1.PNG"
+		// }</code></pre></li>
+                    <li>LowerCasePipe / UpperCasePipe : <pre><code class="hljs">{{prenom | uppercase}}  // HUGO</code></pre></li>
+                    <li>AsyncPipe : <pre><code class="hljs">{{observable | async}}  // Compliqué</code></pre></li>
+                </ul>
+            </section>
+            <section data-background="white.png">
+                <h1 style="text-transform: none">Écrivez vos propre pipes</h1>
+            </section>
+            <section data-background-color="#ffd64b" data-background-transition="zoom">
+                <h1 class="red">Les inputs / outputs</h1>
+            </section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Les inputs / outputs</h1>
+                <ul>
+                    <li style="margin-bottom: 20px;">
+                        html :
+                        <pre style="margin: 0;width: 100%;"><code class="hljs language-html">&lt;app-my-component [monInput]="variableDuParent"
+		                  (somethingHappened)="fonctionDuParent(bool)"&gt;
+		&lt;/app-my-component&gt;
+		</code></pre>
+                    </li>
+                    <li>
+                        ts :
+                        <pre style="margin: 0;width: 100%;"><code class="hljs">@Input()
+		public monInput: string;
 
-		<!--
+		@Output
+		public somethingHappened = new EventEmitter&lt;void&gt;();</code></pre>
+                    </li>
+                </ul>
+            </section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Les inputs / outputs</h1>
+                <p class="fragment"><b class="red">BASE</b> de la communication entre deux composants</p>
+                <p class="fragment">Permet de tout faire</p>
+                <p class="fragment">La data est <b class="red">TOUJOURS</b> gérée par le composant parent</p>
+                <p class="fragment">Les enfants lise l'information et émettent des évènements</p>
+            </section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">TP - Tombi</h1>
+                <ol>
+                    <li>Ajouter la date du jour en haut à droite</li>
+                    <li>Forcer le nom - prénom en majuscule</li>
+                    <li>Créer un composant "conteneur" (list-students)</li>
+                    <li>Afficher plusieurs cartes étudiants</li>
+                    <li>Extraire la partie détail du composant student-card dans un sous-composant.</li>
+                </ol>
+            </section>
+        </section>
+
+        <!--
             Chapitre 6
         -->
-		<section>
-			<section data-background="img/background-1.jpg">
-				<h1>CHAPITRE 6</h1>
-				<h2>Services</h2>
-			</section>
-			<section data-background="https://media.giphy.com/media/yjos61Qgsy17q/source.gif">
-				<h1>Et le backend ?</h1>
-			</section>
-			<section data-background="img/white.png">
-				<h1 class="small-title">Qu'est ce qu'un service ?</h1>
-				<ul>
-					<li class="fragment highlight-red">Centralise du code pour un module</li>
-					<li class="fragment highlight-red">Partage des informations globales</li>
-					<li>Utilisé dans plusieurs parties de l'application</li>
-				</ul>
-				<p class="fragment">Exemple: Students, Authentification, création d'utilisateurs, déconnexion, etc.</p>
-			</section>
+        <section>
+            <section data-background="img/background-1.jpg">
+                <h1>CHAPITRE 6</h1>
+                <h2>Services</h2>
+            </section>
+            <section data-background="https://media.giphy.com/media/yjos61Qgsy17q/source.gif">
+                <h1>Et le backend ?</h1>
+            </section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Qu'est ce qu'un service ?</h1>
+                <ul>
+                    <li class="fragment highlight-red">Centralise du code pour un module</li>
+                    <li class="fragment highlight-red">Partage des informations globales</li>
+                    <li>Utilisé dans plusieurs parties de l'application</li>
+                </ul>
+                <p class="fragment">Exemple: Students, Authentification, création d'utilisateurs, déconnexion, etc.</p>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Utilisation</h1>
-				<p>Doit être injecté</p>
-				<p class="fragment">Niveau d'injection ∝ nombre d'instance</p>
-				<ul>
-					<li class="fragment">app.module : Tous les composants & services</li>
-					<li class="fragment">app.component : Tous les composants</li>
-					<li class="fragment">my-component : Composant et ses enfants</li>
-				</ul>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Utilisation</h1>
+                <p>Doit être injecté</p>
+                <p class="fragment">Niveau d'injection ∝ nombre d'instance</p>
+                <ul>
+                    <li class="fragment">app.module : Tous les composants & services</li>
+                    <li class="fragment">app.component : Tous les composants</li>
+                    <li class="fragment">my-component : Composant et ses enfants</li>
+                </ul>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Nombre d'instances</h1>
-				<p>2 premiers cas : <b>singleton</b></p>
-				<p class="fragment">Dernier cas : 1 instance composant = 1 instance service.</p>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Nombre d'instances</h1>
+                <p>2 premiers cas : <b>singleton</b></p>
+                <p class="fragment">Dernier cas : 1 instance composant = 1 instance service.</p>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Utilisation</h1>
-				<p>Injection de dépendance</p>
-				<pre><code class="hljs">providers: [StudentService]</code></pre>
-				<pre class="fragment"><code class="hljs">constructor(private studentService: StudentService) {}</code></pre>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Utilisation</h1>
+                <p>Injection de dépendance</p>
+                <pre><code class="hljs">providers: [StudentService]</code></pre>
+                <pre class="fragment"><code class="hljs">constructor(private studentService: StudentService) {}</code></pre>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Utilité</h1>
-				<ul>
-					<li>Pas de duplication</li>
-					<li class="fragment">Partage des données entre les composants</li>
-					<li class="fragment">Exécute des tâches</li>
-					<li class="fragment">Récupère les données</li>
-				</ul>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Utilité</h1>
+                <ul>
+                    <li>Pas de duplication</li>
+                    <li class="fragment">Partage des données entre les composants</li>
+                    <li class="fragment">Exécute des tâches</li>
+                    <li class="fragment">Récupère les données</li>
+                </ul>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1>Génération du service</h1>
-				<pre><code class="hljs">ng generate service students</code></pre>
-				<p class="fragment">Remarque : On ne suffixe jamais pas '-service'</p>
-			</section>
+            <section data-background="img/white.png">
+                <h1>Génération du service</h1>
+                <pre><code class="hljs">ng generate service students</code></pre>
+                <p class="fragment">Remarque : On ne suffixe jamais pas '-service'</p>
+            </section>
 
-			<section data-background-color="#ffd64b" data-background-transition="zoom">
-				<h1 class="red small-title">TP Plier / Déplier les informations d'une carte</h1>
-			</section>
-		</section>
+            <section data-background-color="#ffd64b" data-background-transition="zoom">
+                <h1 class="red small-title">TP Plier / Déplier les informations d'une carte</h1>
+            </section>
+        </section>
 
 
-		<!--
-			Chapitre 7 - RxJs
-		-->
+        <!--
+            Chapitre 7 - RxJs
+        -->
 
-		<section>
-			<section data-background="img/background-1.jpg">
-				<h1>CHAPITRE 7</h1>
-				<h2>RxJs</h2>
-			</section>
+        <section>
+            <section data-background="img/background-1.jpg">
+                <h1>CHAPITRE 7</h1>
+                <h2>RxJs</h2>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 style="text-transform: none" class="small-title">ReactiveX</h1>
-				<ul>
-					<li style="font-size: .8em;">JavaScript: RxJS</li>
-					<li style="font-size: .8em;">Java: RxJava</li>
-					<li style="font-size: .8em;">C#: Rx.NET</li>
-					<li style="font-size: .8em;">C#(Unity): UniRx</li>
-					<li style="font-size: .8em;">Scala: RxScala</li>
-					<li style="font-size: .8em;">Clojure: RxClojure</li>
-					<li style="font-size: .8em;">C++: RxCpp</li>
-					<li style="font-size: .8em;">Lua: RxLua</li>
-					<li style="font-size: .8em;">Ruby: Rx.rb</li>
-					<li style="font-size: .8em;">Python: RxPY</li>
-					<li style="font-size: .8em;">Go: RxGo</li>
-				</ul>
-				<ul>
-					<li style="font-size: .8em;">Groovy: RxGroovy</li>
-					<li style="font-size: .8em;">JRuby: RxJRuby</li>
-					<li style="font-size: .8em;">Kotlin: RxKotlin</li>
-					<li style="font-size: .8em;">Swift: RxSwift</li>
-					<li style="font-size: .8em;">PHP: RxPHP</li>
-					<li style="font-size: .8em;">Elixir: reaxive</li>
-					<li style="font-size: .8em;">Dart: RxDart</li>
-					<li style="font-size: .8em;">Champ text</li>
-					<li style="font-size: .8em;">Progression chargement fichier</li>
-					<li style="font-size: .8em;">Communications http</li>
-				</ul>
-			</section>
+            <section data-background="img/white.png">
+                <h1 style="text-transform: none" class="small-title">ReactiveX</h1>
+                <ul>
+                    <li style="font-size: .8em;">JavaScript: RxJS</li>
+                    <li style="font-size: .8em;">Java: RxJava</li>
+                    <li style="font-size: .8em;">C#: Rx.NET</li>
+                    <li style="font-size: .8em;">C#(Unity): UniRx</li>
+                    <li style="font-size: .8em;">Scala: RxScala</li>
+                    <li style="font-size: .8em;">Clojure: RxClojure</li>
+                    <li style="font-size: .8em;">C++: RxCpp</li>
+                    <li style="font-size: .8em;">Lua: RxLua</li>
+                    <li style="font-size: .8em;">Ruby: Rx.rb</li>
+                    <li style="font-size: .8em;">Python: RxPY</li>
+                    <li style="font-size: .8em;">Go: RxGo</li>
+                </ul>
+                <ul>
+                    <li style="font-size: .8em;">Groovy: RxGroovy</li>
+                    <li style="font-size: .8em;">JRuby: RxJRuby</li>
+                    <li style="font-size: .8em;">Kotlin: RxKotlin</li>
+                    <li style="font-size: .8em;">Swift: RxSwift</li>
+                    <li style="font-size: .8em;">PHP: RxPHP</li>
+                    <li style="font-size: .8em;">Elixir: reaxive</li>
+                    <li style="font-size: .8em;">Dart: RxDart</li>
+                    <li style="font-size: .8em;">Champ text</li>
+                    <li style="font-size: .8em;">Progression chargement fichier</li>
+                    <li style="font-size: .8em;">Communications http</li>
+                </ul>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Les observables</h1>
-				<div>
-					<ul>
-						<li style="font-size: .8em;">Routing</li>
-						<li style="font-size: .8em;">Reactive Forms</li>
-						<li style="font-size: .8em;">Http calls</li>
-						<li style="font-size: .8em;">Guard</li>
-					</ul>
-				</div>
-				<img src="img/observables-everywhere.png" alt="observables-everywhere" />
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Les observables</h1>
+                <div>
+                    <ul>
+                        <li style="font-size: .8em;">Routing</li>
+                        <li style="font-size: .8em;">Reactive Forms</li>
+                        <li style="font-size: .8em;">Http calls</li>
+                        <li style="font-size: .8em;">Guard</li>
+                    </ul>
+                </div>
+                <img src="img/observables-everywhere.png" alt="observables-everywhere" />
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Observables</h1>
-				<p>Emet des informations dans le temps</p>
-				<p style="text-align: left">Exemples :</p>
-				<ul>
-					<li>Champ text</li>
-					<li>Progression chargement fichier</li>
-					<li>Communications http</li>
-				</ul>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Observables</h1>
+                <p>Emet des informations dans le temps</p>
+                <p style="text-align: left">Exemples :</p>
+                <ul>
+                    <li>Champ text</li>
+                    <li>Progression chargement fichier</li>
+                    <li>Communications http</li>
+                </ul>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Observer</h1>
-				<p>Code exécuté à chaque fois que l'observable émet une information</p>
-				<p style="text-align: left">L'observable envoie :</p>
-				<ul>
-					<li>Informations</li>
-					<li>Erreur</li>
-					<li>Complete (il n'émettra plus)</li>
-				</ul>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Observer</h1>
+                <p>Code exécuté à chaque fois que l'observable émet une information</p>
+                <p style="text-align: left">L'observable envoie :</p>
+                <ul>
+                    <li>Informations</li>
+                    <li>Erreur</li>
+                    <li>Complete (il n'émettra plus)</li>
+                </ul>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Exemple</h1>
-				<pre><code class="hljs js">const counter = Observable.interval(1000);</code></pre>
-				<p>Émet un chiffre toutes les 1000 milisecondes</p>
-				<pre><code class="hljs java">counter.subscribe(
+            <section data-background="img/white.png">
+                <h1 class="small-title">Exemple</h1>
+                <pre><code class="hljs js">const counter = Observable.interval(1000);</code></pre>
+                <p>Émet un chiffre toutes les 1000 milisecondes</p>
+                <pre><code class="hljs java">counter.subscribe(
 	(value: number) => {this.secondes = value},
 	(error: any) => {console.log('une erreur a été rencontrée')},
 	() => {console.log('Observable complétée !')
 });</code></pre>
-				<p>Stock la valeur émise chaque seconde dans <em>this.value</em></p>
+                <p>Stock la valeur émise chaque seconde dans <em>this.value</em></p>
 
-			</section>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Subscriptions</h1>
-				<p>Pour le moment : souscription non enregistrée</p>
-				<p>Continue à l'infini : comportements inattendus</p>
-				<blockquote>Généralement, les Observables fournis par Angular se suppriment lors de la destruction du component.</blockquote>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Subscriptions</h1>
+                <p>Pour le moment : souscription non enregistrée</p>
+                <p>Continue à l'infini : comportements inattendus</p>
+                <blockquote>Généralement, les Observables fournis par Angular se suppriment lors de la destruction du component.</blockquote>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Subscriptions Personnalisées</h1>
-				<pre><code class="hljs">this.counterSubscription = counter.subscribe();</code></pre>
-				<pre><code class="hljs">export class MyComponent implements OnDestroy {
+            <section data-background="img/white.png">
+                <h1 class="small-title">Subscriptions Personnalisées</h1>
+                <pre><code class="hljs">this.counterSubscription = counter.subscribe();</code></pre>
+                <pre><code class="hljs">export class MyComponent implements OnDestroy {
   ngOnDestroy() {
 	this.counterSubscription.unsubscribe();
   }
 }</code></pre>
-			</section>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Subjects</h1>
-				<p>Réagit aux nouvelles informations</p>
-				<p class="fragment">Peut aussi en émettre !</p>
-				<p>Exemple dans un service : Peut être modifié par un service et fait réagire tous les autres.</p>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Subjects</h1>
+                <p>Réagit aux nouvelles informations</p>
+                <p class="fragment">Peut aussi en émettre !</p>
+                <p>Exemple dans un service : Peut être modifié par un service et fait réagire tous les autres.</p>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Opérateurs</h1>
-				<ul>
-					<li style="font-size: .8em"><span class="inline-code">.pipe()</span> : Utilisé pour ajouter des opérateurs sur un Observable</li>
-					<li style="font-size: .8em" class="fragment"><span class="inline-code">map()</span> : modifie la valeur de l'observable</li>
-					<li style="font-size: .8em" class="fragment"><span class="inline-code">tap()</span> : effectue un traitement sur la valeur sans effet de bord.</li>
-					<li style="font-size: .8em" class="fragment"><span class="inline-code">filter()</span> : Filtre les données émises</li>
-					<li style="font-size: .8em" class="fragment"><span class="inline-code">scan()</span> et <span class="inline-code">reduce()</span> : Exécute une fonction qui réuni l'ensemble des valeurs. (Scan retourne chaque étape du calcul)</li>
-				</ul>
-				<a href="https://rxjs-dev.firebaseapp.com/">Documentation RxJs</a>
-			</section>
-		</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Opérateurs</h1>
+                <ul>
+                    <li style="font-size: .8em"><span class="inline-code">.pipe()</span> : Utilisé pour ajouter des opérateurs sur un Observable</li>
+                    <li style="font-size: .8em" class="fragment"><span class="inline-code">map()</span> : modifie la valeur de l'observable</li>
+                    <li style="font-size: .8em" class="fragment"><span class="inline-code">tap()</span> : effectue un traitement sur la valeur sans effet de bord.</li>
+                    <li style="font-size: .8em" class="fragment"><span class="inline-code">filter()</span> : Filtre les données émises</li>
+                    <li style="font-size: .8em" class="fragment"><span class="inline-code">scan()</span> et <span class="inline-code">reduce()</span> : Exécute une fonction qui réuni l'ensemble des valeurs. (Scan retourne chaque étape du calcul)</li>
+                </ul>
+                <a href="https://rxjs-dev.firebaseapp.com/">Documentation RxJs</a>
+            </section>
+        </section>
 
 
-		<!--
+        <!--
             Chapitre 8 - HttpClient
         -->
-		<section>
-			<section data-background="img/background-1.jpg">
-				<h1>CHAPITRE 8</h1>
-				<h2>Interagir avec le serveur - HttpClient</h2>
-			</section>
+        <section>
+            <section data-background="img/background-1.jpg">
+                <h1>CHAPITRE 8</h1>
+                <h2>Interagir avec le serveur - HttpClient</h2>
+            </section>
 
-			<section data-background-color="#ffd64b" data-background-transition="zoom">
-				<h1 class="red">Configuration du backend</h1>
-			</section>
+            <section data-background-color="#ffd64b" data-background-transition="zoom">
+                <h1 class="red">Configuration du backend</h1>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Configuration</h1>
-				<ul>
-					<li>Import du HttpClientModule dans AppModule</li>
-					<li>Injection du HttpClient dans notre service</li>
-				</ul>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Configuration</h1>
+                <ul>
+                    <li>Import du HttpClientModule dans AppModule</li>
+                    <li>Injection du HttpClient dans notre service</li>
+                </ul>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Get</h1>
-				<pre><code class="hljs">this.httpClient.post('https://.....')</code></pre>
-				<blockquote>Attention, les méthode de httClient retournent des Observables et non la donnée directement.
-					Une bonne pratique est de préciser le type d'observable retourné par le serveur pour éviter les erreurs.</blockquote>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Get</h1>
+                <pre><code class="hljs">this.httpClient.post('https://.....')</code></pre>
+                <blockquote>Attention, les méthode de httClient retournent des Observables et non la donnée directement.
+                    Une bonne pratique est de préciser le type d'observable retourné par le serveur pour éviter les erreurs.</blockquote>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Post</h1>
-				<p>Seule différence, le second paramètre est l'objet que l'on souhaite envoyer au backend.</p>
-				<pre><code class="hljs">this.httpClient.post('https://.....', this.varidable)</code></pre>
-				<p class="fragment">Même synthaxe pour Push et Put.</p>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Post</h1>
+                <p>Seule différence, le second paramètre est l'objet que l'on souhaite envoyer au backend.</p>
+                <pre><code class="hljs">this.httpClient.post('https://.....', this.varidable)</code></pre>
+                <p class="fragment">Même synthaxe pour Push et Put.</p>
+            </section>
 
-			<section data-background-color="#ffd64b" data-background-transition="zoom">
-				<h1 class="red small-title">TP récupération de la liste d'étudiants</h1>
-			</section>
-		</section>
+            <section data-background-color="#ffd64b" data-background-transition="zoom">
+                <h1 class="red small-title">TP récupération de la liste d'étudiants</h1>
+            </section>
+        </section>
 
-		<!--
+        <!--
             Chapitre 8 - Routing
         -->
-		<section>
-			<section data-background="img/background-1.jpg">
-				<h1>CHAPITRE 8</h1>
-				<h2>Routing</h2>
-			</section>
+        <section>
+            <section data-background="img/background-1.jpg">
+                <h1>CHAPITRE 8</h1>
+                <h2>Routing</h2>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Changement d'URL</h1>
-				<p>SPA : beaucoup plus rapide</p>
-				<p>Changement d'URL → pas de nouveau chargement</p>
-				<p>Remplacement des composants affichés</p>
-				<p class="fragment">Pour l'instant : Une seule vue</p>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Changement d'URL</h1>
+                <p>SPA : beaucoup plus rapide</p>
+                <p>Changement d'URL → pas de nouveau chargement</p>
+                <p>Remplacement des composants affichés</p>
+                <p class="fragment">Pour l'instant : Une seule vue</p>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Création des routes</h1>
-				<pre><code class="hljs language-javascript">import {Route} from '@angular/router';
+            <section data-background="img/white.png">
+                <h1 class="small-title">Création des routes</h1>
+                <pre><code class="hljs language-javascript">import {Route} from '@angular/router';
 
 const appRoute: Routes = [
 	{path: 'path1', component: UnComponent },
 	{path: 'path2', component: DeuxComponent },
 	{path: '', 		component: UnComponent } // Défaut
 ];</code></pre>
-			</section>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Intégration du routeur</h1>
-				<pre><code class="hljs">
+            <section data-background="img/white.png">
+                <h1 class="small-title">Intégration du routeur</h1>
+                <pre><code class="hljs">
 imports: [...,
 	RouterModule.forRoot(appRoutes)
 ]
 				</code></pre>
-				<pre><code class="hljs"><routeur-outlet></routeur-outlet></code></pre>
-			</section>
+                <pre><code class="hljs"><routeur-outlet></routeur-outlet></code></pre>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Navigation - HTML</h1>
-				<pre><code class="hljs html"><a href="accueil">accueil</a>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Navigation - HTML</h1>
+                <pre><code class="hljs html"><a href="accueil">accueil</a>
 <a href="add">création</a></code></pre>
-				<p>VS</p>
-				<pre><code class="hljs html"><a routerLink="accueil">accueil</a>
+                <p>VS</p>
+                <pre><code class="hljs html"><a routerLink="accueil">accueil</a>
 <a routerLink="add">création</a></code></pre>
-			</section>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Route active</h1>
-				<pre><code class="hljs"><a routerLinkActive="active" roulerLink="accueil">accueil</a>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Route active</h1>
+                <pre><code class="hljs"><a routerLinkActive="active" roulerLink="accueil">accueil</a>
 <a routerLinkActive="active" roulerLink="add">Création</a></code></pre>
-			</section>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Navigation - TS</h1>
-				<p>Excécuter du code avant de changer de route<page></page></p>
-				<pre><code class="hljs">constructor(private authService: AuthService, private router: Router) { }
+            <section data-background="img/white.png">
+                <h1 class="small-title">Navigation - TS</h1>
+                <p>Excécuter du code avant de changer de route<page></page></p>
+                <pre><code class="hljs">constructor(private authService: AuthService, private router: Router) { }
 
 onClic() {
 	console.log('some code excecution');
 	this.router.navigate(['appareils']);
 }</code></pre>
-			</section>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Paramètres de route</h1>
-				<pre><code class="hljs text">students/nom-de-l-etudiant</code></pre>
-				<pre class="fragment"><code class="hljs">const appRoutes: Routes = [
+            <section data-background="img/white.png">
+                <h1 class="small-title">Paramètres de route</h1>
+                <pre><code class="hljs text">students/nom-de-l-etudiant</code></pre>
+                <pre class="fragment"><code class="hljs">const appRoutes: Routes = [
 	{ path: 'students',   	component: StudentsViewComponent },
 	{ path: 'students/:id', component: SingleStudentComponent },
 	{ path: 'add', 		component: NewStudentViewComponent },
 	{ path: '', 		component: StudentsViewComponent }
 ];</code></pre>
-				<p class="small fragment">Tous les chemins de type <span>student/*</span> seront renvoyés vers </span>SingleStudentComponent</span></p>
-			</section>
+                <p class="small fragment">Tous les chemins de type <span>student/*</span> seront renvoyés vers </span>SingleStudentComponent</span></p>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Paramètres de route</h1>
-				<pre class="fragment"><code class="hljs">constructor(private route: ActivatedRoute) { }</code></pre>
-				<pre class="fragment"><code class="hljs java">ngOnInit() {
+            <section data-background="img/white.png">
+                <h1 class="small-title">Paramètres de route</h1>
+                <pre class="fragment"><code class="hljs">constructor(private route: ActivatedRoute) { }</code></pre>
+                <pre class="fragment"><code class="hljs java">ngOnInit() {
 	this.name = this.route.snapshot.params['id'];
 }</code></pre>
-			</section>
+            </section>
 
-			<section data-background-color="#ffd64b" data-background-transition="zoom">
-				<h1 class="red">TP</h1>
-				<p>Création de deux routes :</p>
-				<ul>
-					<li><code style="background-color: #eee; color: var(--red)">'/nouveau'</code></li>
-					<li><code style="background-color: #eee; color: var(--red)">'/etudiant/:id'</code></li>
-				</ul>
-			</section>
+            <section data-background-color="#ffd64b" data-background-transition="zoom">
+                <h1 class="red">TP</h1>
+                <p>Création de deux routes :</p>
+                <ul>
+                    <li><code style="background-color: #eee; color: var(--red)">'/nouveau'</code></li>
+                    <li><code style="background-color: #eee; color: var(--red)">'/etudiant/:id'</code></li>
+                </ul>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Redirection</h1>
-				<p>Exemple : 404 si page inéxistante</p>
-				<pre><code class="hljs html"><h2>Erreur 404</h2>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Redirection</h1>
+                <p>Exemple : 404 si page inéxistante</p>
+                <pre><code class="hljs html"><h2>Erreur 404</h2>
 <p>La page que vous cherchez n'existe pas !</p></code></pre>
-				<pre class="fragment"><code class="hljs js">const appRoutes: Routes = [
+                <pre class="fragment"><code class="hljs js">const appRoutes: Routes = [
 	{ path: 'students',     component: StudentsViewComponent },
 	{ path: 'students/:id', component: SingleStudentComponent },
 	{ path: 'add',          component: NewStudentViewComponent },
@@ -918,30 +918,30 @@ onClic() {
 	{ path: 'not-found',    component: NotFoundComponent },
   	{ path: '**',           redirectTo: 'not-found' }
 ];</code></pre>
-			</section>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Guards</h1>
-				<p>Gère l'accès à une route</p>
-				<p>Exemple : Vérifier l'authentification, l'identité</p>
-				<p>Avec ce qu'on connait : ngOnInit() de chaque composant.</p>
-				<ul>
-					<li>Lourd</li>
-					<li>Duplication de code</li>
-					<li>Plus d'erreurs</li>
-				</ul>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Guards</h1>
+                <p>Gère l'accès à une route</p>
+                <p>Exemple : Vérifier l'authentification, l'identité</p>
+                <p>Avec ce qu'on connait : ngOnInit() de chaque composant.</p>
+                <ul>
+                    <li>Lourd</li>
+                    <li>Duplication de code</li>
+                    <li>Plus d'erreurs</li>
+                </ul>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Guards</h1>
-				<blockquote>Guard : Service exécuté lors de l'accès à une route.</blockquote>
-				<p class="fragment">Doit implémenter canActivate</p>
-				<p class="fragment">Avec ce qu'on connait : ngOnInit() de chaque composant.</p>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Guards</h1>
+                <blockquote>Guard : Service exécuté lors de l'accès à une route.</blockquote>
+                <p class="fragment">Doit implémenter canActivate</p>
+                <p class="fragment">Avec ce qu'on connait : ngOnInit() de chaque composant.</p>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Guards</h1>
-				<pre><code class="hljs js">import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot } from '@angular/router';
+            <section data-background="img/white.png">
+                <h1 class="small-title">Guards</h1>
+                <pre><code class="hljs js">import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 export class MyGuard implements CanActivate {
@@ -950,146 +950,146 @@ export class MyGuard implements CanActivate {
 	state: RouterStateSnapshot): Observable &lt;boolean&gt; {
   }
 }</code></pre>
-				<blockquote class="fragment" style="margin-top:40px;">CanActivate peut aussi retourner une Promise ou un boolean</blockquote>
-			</section>
+                <blockquote class="fragment" style="margin-top:40px;">CanActivate peut aussi retourner une Promise ou un boolean</blockquote>
+            </section>
 
-		</section>
+        </section>
 
 
-		<!--
-    		Chapitre 9 - Formulaires
-		-->
-		<section>
-			<section data-background="img/background-1.jpg">
-				<h1>CHAPITRE 9</h1>
-				<h2>Formulaires</h2>
-			</section>
+        <!--
+            Chapitre 9 - Formulaires
+        -->
+        <section>
+            <section data-background="img/background-1.jpg">
+                <h1>CHAPITRE 9</h1>
+                <h2>Formulaires</h2>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Formulaires</h1>
-				<p>Récupérer des données</p>
-				<p>Pour l'instant : afficher des données</p>
-				<p>Intéragire avec l'utilisateur</p>
-				<p class="fragment" style="text-align: left">Deux méthodes :</p>
-				<ul class="fragment">
-					<li>Template : TypeScript</li>
-					<li>Réactive : HTML</li>
-				</ul>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Formulaires</h1>
+                <p>Récupérer des données</p>
+                <p>Pour l'instant : afficher des données</p>
+                <p>Intéragire avec l'utilisateur</p>
+                <p class="fragment" style="text-align: left">Deux méthodes :</p>
+                <ul class="fragment">
+                    <li>Template : TypeScript</li>
+                    <li>Réactive : HTML</li>
+                </ul>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Formulaires</h1>
-				<ul>
-					<li>Controle de la validité</li>
-					<li>Afficher des erreurs</li>
-					<li>Afficher des aides adaptées</li>
-					<li>Émet les valeurs saisies au serveur</li>
-				</ul>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Formulaires</h1>
+                <ul>
+                    <li>Controle de la validité</li>
+                    <li>Afficher des erreurs</li>
+                    <li>Afficher des aides adaptées</li>
+                    <li>Émet les valeurs saisies au serveur</li>
+                </ul>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Méthode Template</h1>
-				<p>Création du template en HTML 5 classique</p>
-				<pre><code class="hljs html"><form>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Méthode Template</h1>
+                <p>Création du template en HTML 5 classique</p>
+                <pre><code class="hljs html"><form>
 	<div class="form-group">
 		<label for="nom">Nom : </label>
 		<input type="text" class="form-control" id="nom">
 	</div>
 </form></code></pre>
-			</section>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Méthode Template</h1>
-				<p>Ajout du <b>two ways binding</b> grâce à <span class="inline-code">[(ngModel)]</span></p>
-				<pre style="white-space: pre-wrap;"><code class="hljs html"><form>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Méthode Template</h1>
+                <p>Ajout du <b>two ways binding</b> grâce à <span class="inline-code">[(ngModel)]</span></p>
+                <pre style="white-space: pre-wrap;"><code class="hljs html"><form>
 	<div class="form-group">
     <label for="nom">Nom : </label>
 		<input type="text" class="form-control" id="nom"
-			   required
-			   [(ngModel)]="model.nom">
+               required
+               [(ngModel)]="model.nom">
 	</div>
 </form></code></pre>
-			</section>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Utilisation du FormsModule</h1>
-				<p>Ajout du <span class="inline-code">FormsModule</span></p>
-				<p class="fragment">Déclaration d'une variable pour le formulaire :  <span class="inline-code">#myForme="ngForm"</span></p>
-				<p class="fragment">Déclaration d'une variable pour les inputs :  <span class="inline-code">#myInput="ngModel"</span></p>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Utilisation du FormsModule</h1>
+                <p>Ajout du <span class="inline-code">FormsModule</span></p>
+                <p class="fragment">Déclaration d'une variable pour le formulaire :  <span class="inline-code">#myForme="ngForm"</span></p>
+                <p class="fragment">Déclaration d'une variable pour les inputs :  <span class="inline-code">#myInput="ngModel"</span></p>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Validation des données</h1>
-				<p class="fragment">Affichage de messages d'erreur personnalisé : <span class="inline-code">[hidden]="myInput.valid"</span></p>
-				<p class="fragment">Autoriser le submit : <span class="inline-code">[disabled]="!studentForm.form.valid"</span></p>
-				<p class="fragment">Action au submit : <span class="inline-code"> (ngSubmit)="onSubmit()"</span></p>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Validation des données</h1>
+                <p class="fragment">Affichage de messages d'erreur personnalisé : <span class="inline-code">[hidden]="myInput.valid"</span></p>
+                <p class="fragment">Autoriser le submit : <span class="inline-code">[disabled]="!studentForm.form.valid"</span></p>
+                <p class="fragment">Action au submit : <span class="inline-code"> (ngSubmit)="onSubmit()"</span></p>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Méthode Template</h1>
-				<p>On Utilise ensuite les classiques validateurs HTML</p>
-				<ul>
-					<li>maxlength</li>
-					<li>minlength</li>
-					<li>multiple</li>
-					<li>pattern</li>
-					<li>placeholder</li>
-					<li>readonly</li>
-					<li>size</li>
-					<li>spellcheck</li>
-				</ul>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Méthode Template</h1>
+                <p>On Utilise ensuite les classiques validateurs HTML</p>
+                <ul>
+                    <li>maxlength</li>
+                    <li>minlength</li>
+                    <li>multiple</li>
+                    <li>pattern</li>
+                    <li>placeholder</li>
+                    <li>readonly</li>
+                    <li>size</li>
+                    <li>spellcheck</li>
+                </ul>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Méthode Template</h1>
-				<img src="img/form-template.PNG" alt="form" />
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Méthode Template</h1>
+                <img src="img/form-template.PNG" alt="form" />
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Méthode Réactive</h1>
-				<ul>
-					<li>Beaucoup plus complet</li>
-					<li>Gère mieux la complexité</li>
-					<li>Pas de logique dans l'HTML</li>
-					<li>Simple à tester</li>
-					<li>Très puissant une fois maitrisé</li>
-				</ul>
-				<blockquote class="fragment" style="font-weight: bold; text-align: center">Prise en main plus longue et abstraite.<br>Moins débutant.</blockquote>
-			</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Méthode Réactive</h1>
+                <ul>
+                    <li>Beaucoup plus complet</li>
+                    <li>Gère mieux la complexité</li>
+                    <li>Pas de logique dans l'HTML</li>
+                    <li>Simple à tester</li>
+                    <li>Très puissant une fois maitrisé</li>
+                </ul>
+                <blockquote class="fragment" style="font-weight: bold; text-align: center">Prise en main plus longue et abstraite.<br>Moins débutant.</blockquote>
+            </section>
 
-			<section data-background-color="#371450" data-background-transition="zoom">
-				<h1 class="red">TP : Formulaire de création d'un étudiant (avec image).</h1>
-			</section>
-		</section>
+            <section data-background-color="#371450" data-background-transition="zoom">
+                <h1 class="red small-title">TP : Formulaire de création d'un étudiant (avec image).</h1>
+            </section>
+        </section>
 
-		<!--
+        <!--
             Chapitre 10 - Les Tests
         -->
-		<section>
-			<section data-background="img/background-1.jpg">
-				<h1>CHAPITRE 10</h1>
-				<h2>Tests</h2>
-			</section>
+        <section>
+            <section data-background="img/background-1.jpg">
+                <h1>CHAPITRE 10</h1>
+                <h2>Tests</h2>
+            </section>
 
-			<section data-background="img/white.png">
-				<h1 class="small-title">Démo</h1>
-			</section>
-		</section>
+            <section data-background="img/white.png">
+                <h1 class="small-title">Démo</h1>
+            </section>
+        </section>
 
-	</div>
+    </div>
 </div>
 
 <script src="js/reveal.js"></script>
 
 <script>
-	Reveal.initialize({
-		dependencies: [
-			{ src: 'plugin/markdown/marked.js' },
-			{ src: 'plugin/markdown/markdown.js' },
-			{ src: 'plugin/notes/notes.js', async: true },
-			{ src: 'plugin/highlight/highlight.js', async: true }
-		]
-	});
+    Reveal.initialize({
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true }
+        ]
+    });
 </script>
 </body>
 </html>
